@@ -1,5 +1,6 @@
-export default {
-	title: 'My Docs Site',
+/** @type {import('$lib/types/types').userconfig} */
+const userconfig = {
+	title: 'My title',
 	navbar: [
 		{
 			text: 'Github',
@@ -11,3 +12,5 @@ export default {
 		}
 	]
 };
+
+export default userconfig;

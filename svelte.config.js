@@ -2,6 +2,7 @@ import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import remarkSlug from 'remark-slug';
+import remarkAbmonitions from 'remark-admonitions';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,7 +15,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md', '.svx'],
 			smartypants: false,
-			remarkPlugins: [remarkSlug],
+			remarkPlugins: [remarkSlug, remarkAbmonitions],
 			layout: 'src/lib/layouts/MarkdownLayout.svelte'
 		})
 	],

@@ -17,6 +17,7 @@
 					{navitem.text}
 				</a>
 			{/each}
+			<a class="nav-link" href="#">Dropdown test</a>
 		</nav>
 	</div>
 </header>
@@ -76,7 +77,7 @@
 		padding-bottom: 1rem;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
-		color: rgba(0, 0, 0, 0.8);
+		color: rgba(0, 0, 0, 0.75);
 		text-decoration: none;
 		transition: color 0.25s;
 	}

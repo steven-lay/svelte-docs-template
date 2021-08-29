@@ -7,7 +7,7 @@
 	/* Update active anchor on scroll */
 	$: updateAnchor(scrollY);
 
-	function updateAnchor(dummy) {
+	function updateAnchor(_dummy) {
 		const offsetTop = 105;
 
 		for (let i = 0; i < $headingsList.length; i++) {

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import TableOfContents from '$lib/components/TableOfContents.svelte';
@@ -48,7 +48,6 @@
 		width: 75%;
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
-		min-height: 100vh;
 		flex: auto;
 	}
 
