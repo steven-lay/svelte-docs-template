@@ -26,6 +26,10 @@
 		width: 100%;
 	}
 
+	.markdown :global(h1) {
+		color: red;
+	}
+
 	.toc {
 		position: sticky;
 		height: 0;

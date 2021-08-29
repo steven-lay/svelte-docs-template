@@ -14,7 +14,8 @@ const config = {
 		mdsvex({
 			extensions: ['.md', '.svx'],
 			smartypants: false,
-			remarkPlugins: [remarkSlug]
+			remarkPlugins: [remarkSlug],
+			layout: 'src/lib/layouts/MarkdownLayout.svelte'
 		})
 	],
 

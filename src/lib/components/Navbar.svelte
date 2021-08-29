@@ -8,10 +8,15 @@
 		<div class="nav-button">
 			<MdDehaze />
 		</div>
-		<div class="nav-title">{userconfig.title}</div>
+		<div class="nav-title">
+			{userconfig.title}
+		</div>
 		<nav class="nav-group">
-			<a class="nav-link" href="/">Test link</a>
-			<a class="nav-link" href="/">Test link</a>
+			{#each userconfig.navbar as navitem}
+				<a sveltekit:prefetch class="nav-link" href={navitem.link}>
+					{navitem.text}
+				</a>
+			{/each}
 		</nav>
 	</div>
 </header>
