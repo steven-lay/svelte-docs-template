@@ -17,6 +17,19 @@
 </article>
 
 <style>
+	@import '$lib/styles/admonition-classic.css';
+	@import '$lib/styles/prism.css';
+
+	.markdown :global(blockquote) {
+		background-color: rgba(0, 0, 0, 0.025);
+		margin-left: 0;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 0.1rem 0.5rem 0.1rem 1rem;
+		border-left: 4px solid gray;
+		width: 100%;
+	}
+
 	.markdown :global(p) {
 		font-size: 1.05rem;
 		color: rgba(0, 0, 0, 0.8);
@@ -63,11 +76,12 @@
 	}
 
 	.markdown :global(strong) {
-		font-weight: 500;
+		font-weight: 700;
 	}
 
 	.markdown :global(li:not(:last-child)) {
 		margin-bottom: 0.75rem;
+		margin-top: 0.75rem;
 	}
 
 	.markdown :global(table) {
@@ -90,5 +104,12 @@
 		padding-right: 0.75rem;
 		padding-top: 0.875rem;
 		padding-bottom: 0.875rem;
+	}
+
+	.markdown :global(code:not([class])) {
+		background-color: rgba(0, 0, 0, 0.05);
+		color: rgba(0, 0, 0, 0.8);
+		padding: 0.2rem;
+		font-size: 0.9rem;
 	}
 </style>

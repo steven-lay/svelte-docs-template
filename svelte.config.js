@@ -1,23 +1,17 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
-import remarkSlug from 'remark-slug';
-import remarkAbmonitions from 'remark-admonitions';
+import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md', '.svx'],
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: [
 		preprocess(),
-		mdsvex({
-			extensions: ['.md', '.svx'],
-			smartypants: false,
-			remarkPlugins: [remarkSlug, remarkAbmonitions],
-			layout: 'src/lib/layouts/MarkdownLayout.svelte'
-		})
+		mdsvex(mdsvexConfig)
 	],
 
 	kit: {

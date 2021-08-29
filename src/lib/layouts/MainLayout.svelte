@@ -23,12 +23,8 @@
 </div>
 
 <style>
-	@import 'modern-normalize/modern-normalize.css';
-
-	:global(:root) {
-		overflow-y: scroll;
-		scroll-behavior: smooth;
-	}
+	@import '$lib/styles/modern-normalize.css';
+	@import '$lib/styles/global.css';
 
 	.main-layout {
 		display: flex;
