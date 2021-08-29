@@ -37,8 +37,8 @@
 		margin-right: auto;
 		max-width: 88rem;
 		align-items: center;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding-top: 1.125rem;
+		padding-bottom: 1.125rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -50,9 +50,24 @@
 		cursor: pointer;
 	}
 
+	.nav-group {
+		display: none;
+	}
+
+	@media only screen and (min-width: 992px) {
+		.nav-button {
+			display: none;
+		}
+
+		.nav-group {
+			display: inline;
+		}
+	}
+
 	.nav-title {
 		margin-right: 2rem;
 		font-weight: 700;
+		color: rgb(49, 46, 129);
 	}
 
 	.nav-link {
@@ -61,9 +76,9 @@
 		padding-bottom: 1rem;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
-		color: black;
+		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
-		transition: color 0.5s;
+		transition: color 0.25s;
 	}
 
 	.nav-link:visited {
