@@ -61,4 +61,34 @@
 		font-size: 1.05rem;
 		color: rgba(0, 0, 0, 0.8);
 	}
+
+	.markdown :global(strong) {
+		font-weight: 500;
+	}
+
+	.markdown :global(li:not(:last-child)) {
+		margin-bottom: 0.75rem;
+	}
+
+	.markdown :global(table) {
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+		border: 1px solid #e7ddee;
+	}
+
+	.markdown :global(td) {
+		padding: 0.75rem;
+		border: 1px solid #e7ddee;
+	}
+
+	.markdown :global(th) {
+		color: rgb(49, 46, 129);
+		background-color: #e7ddee;
+		text-align: left;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		padding-top: 0.875rem;
+		padding-bottom: 0.875rem;
+	}
 </style>
