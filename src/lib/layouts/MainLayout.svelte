@@ -1,6 +1,13 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import config from '$lib/userconfig.config';
+	import { prefetchRoutes } from '$app/navigation';
+	import { browser } from '$app/env';
+
+	if (config.preloadRoutes && browser) {
+		prefetchRoutes();
+	}
 </script>
 
 <Navbar />

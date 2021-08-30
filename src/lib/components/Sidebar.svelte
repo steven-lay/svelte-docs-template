@@ -15,9 +15,9 @@
 <style>
 	h4 {
 		margin-top: 0;
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
 		padding-left: 0.75rem;
-		font-size: 1.125rem;
+		font-size: 1.05rem;
 		text-transform: uppercase;
 		color: rgb(49, 46, 129);
 	}

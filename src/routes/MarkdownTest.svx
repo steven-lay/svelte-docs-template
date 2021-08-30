@@ -1,14 +1,10 @@
+---
+title: 'Markdown Test'
+toc: false
+---
+
 Markdown: Syntax
 ================
-
-<ul id="ProjectSubmenu">
-    <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
-    <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
-    <li><a class="selected" title="Markdown Syntax Documentation">Syntax</a></li>
-    <li><a href="/projects/markdown/license" title="Pricing and License Information">License</a></li>
-    <li><a href="/projects/markdown/dingus" title="Online Markdown Web Form">Dingus</a></li>
-</ul>
-
 
 *   [Overview](#overview)
     *   [Philosophy](#philosophy)
@@ -29,12 +25,6 @@ Markdown: Syntax
 *   [Miscellaneous](#misc)
     *   [Backslash Escapes](#backslash)
     *   [Automatic Links](#autolink)
-
-
-**Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL][src].
-
-  [src]: /projects/markdown/syntax.text
 
 * * *
 
@@ -554,8 +544,6 @@ Will produce:
 
 If you're referring to a local resource on the same server, you can
 use relative paths:
-
-    See my [About](/about/) page for details.   
 
 Reference-style links use a second set of square brackets, inside
 which you place a label of your choosing to identify the link:

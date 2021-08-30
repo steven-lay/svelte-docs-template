@@ -17,7 +17,6 @@
 					{navitem.text}
 				</a>
 			{/each}
-			<a class="nav-link" href="#">Dropdown test</a>
 		</nav>
 	</div>
 </header>

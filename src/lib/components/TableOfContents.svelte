@@ -46,7 +46,7 @@
 		color: rgb(49, 46, 129);
 		font-weight: 500;
 		margin-top: 0;
-		padding-bottom: 1rem;
+		padding-bottom: 0.75rem;
 		margin-bottom: 0;
 		font-size: 0.95rem;
 		letter-spacing: -0.025em;

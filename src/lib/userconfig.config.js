@@ -1,6 +1,7 @@
 /** @type {import('$lib/types/types').userconfig} */
 const userconfig = {
-	title: 'My title',
+	title: 'My website',
+	preloadRoutes: true,
 	navbar: [
 		{
 			text: 'Github',
