@@ -79,6 +79,10 @@
 		text-decoration: none;
 	}
 
+	a:hover {
+		text-decoration: none !important;
+	}
+
 	.footer-page-text {
 		font-weight: 500;
 		color: rgba(0, 0, 0, 0.7);

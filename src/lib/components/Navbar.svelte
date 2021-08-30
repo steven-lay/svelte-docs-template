@@ -1,11 +1,12 @@
 <script>
 	import MdDehaze from 'svelte-icons/md/MdDehaze.svelte';
 	import userconfig from '$lib/userconfig.config';
+	import { openOffCanvas } from '$lib/stores/openOffcanvas';
 </script>
 
 <header class="header">
 	<div class="nav-container">
-		<div class="nav-button">
+		<div class="nav-button" on:click={() => openOffCanvas.set(true)}>
 			<MdDehaze />
 		</div>
 		<div class="nav-title">
@@ -39,7 +40,7 @@
 		align-items: center;
 		padding-top: 1.125rem;
 		padding-bottom: 1.125rem;
-		padding-left: 1.75rem;
+		padding-left: 1.125rem;
 		padding-right: 1rem;
 	}
 
@@ -61,6 +62,10 @@
 
 		.nav-group {
 			display: inline;
+		}
+
+		.nav-container {
+			padding-left: 1.75rem;
 		}
 	}
 

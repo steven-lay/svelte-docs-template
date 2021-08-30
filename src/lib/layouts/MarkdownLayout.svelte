@@ -4,8 +4,9 @@
 	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
 	import userconfig from '$lib/userconfig.config';
 
+	/* Frontmatter variables */
 	export let title = '';
-	export let toc = true;
+	export let hide_toc = false;
 
 	let headings = [];
 
@@ -24,10 +25,11 @@
 <TransitionWrapper>
 	<div class="flex-wrap">
 		<article use:getHeadings class="markdown">
+			<h1>{title}</h1>
 			<slot />
 			<MarkdownFooter />
 		</article>
-		{#if toc}
+		{#if !hide_toc}
 			<div class="toc">
 				<TableOfContents {headings} />
 			</div>
@@ -150,10 +152,7 @@
 		color: rgb(49, 46, 129);
 		background-color: #e7ddee;
 		text-align: left;
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-		padding-top: 0.875rem;
-		padding-bottom: 0.875rem;
+		padding: 0.75rem;
 	}
 
 	.markdown :global(li:not(:last-child)) {
@@ -161,10 +160,23 @@
 		margin-top: 0.75rem;
 	}
 
+	.markdown :global(caption) {
+		margin-bottom: 0.125rem;
+	}
+
 	.markdown :global(code:not([class])) {
 		background-color: rgba(0, 0, 0, 0.05);
 		color: rgba(0, 0, 0, 0.8);
 		padding: 0.05rem;
 		font-size: 0.9rem;
+	}
+
+	.markdown :global(a) {
+		color: rgb(89, 83, 190);
+		text-decoration: none;
+	}
+
+	.markdown :global(a:hover) {
+		text-decoration: underline;
 	}
 </style>

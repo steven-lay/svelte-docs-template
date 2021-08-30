@@ -1,18 +1,27 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
+	import { openOffCanvas } from '$lib/stores/openOffcanvas';
 
 	const slideDuration = 300;
 </script>
 
-<div class="offcanvas" transition:fly={{ duration: slideDuration, opacity: 1, x: -290 }}>Test</div>
+{#if $openOffCanvas}
+	<div class="offcanvas" transition:fly={{ duration: slideDuration, opacity: 1, x: -300 }}>
+		Test
+	</div>
 
-<div class="fadebackground" transition:fade={{ duration: slideDuration }} />
+	<div
+		class="fadebackground"
+		on:click={() => openOffCanvas.set(false)}
+		transition:fade={{ duration: slideDuration }}
+	/>
+{/if}
 
 <style>
 	.offcanvas {
 		position: fixed;
-		background-color: lightgray;
-		padding: 2rem;
+		background-color: rgb(245, 245, 245);
+		padding: 1.5rem;
 		top: 0;
 		bottom: 0;
 		width: 18rem;

@@ -9,9 +9,9 @@ pre[class*='language-'] {
 	font-family: 'Consolas', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	direction: ltr;
 	text-align: left;
-	white-space: pre;
 	word-spacing: normal;
-	word-break: normal;
+	white-space: pre-wrap;
+	word-break: break-all;
 	font-size: 0.9em;
 	line-height: 1.2em;
 

@@ -12,19 +12,20 @@
 .admonition h5 {
 	margin-top: 0;
 	margin-bottom: 8px;
+	font-size: 1rem;
 	text-transform: uppercase;
 }
 
 .admonition-icon {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 0.2em;
+	margin-right: 0.5em;
 }
 
 .admonition-icon svg {
 	display: inline-block;
-	width: 22px;
-	height: 22px;
+	width: 15px;
+	height: 15px;
 	stroke-width: 0;
 }
 

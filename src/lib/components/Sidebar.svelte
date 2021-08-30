@@ -7,7 +7,9 @@
 	{#each config.sidebar as sidebarEntry}
 		<h4>{sidebarEntry.category}</h4>
 		{#each sidebarEntry.children as child}
-			<a class:active={$page.path == child.link} href={child.link}>{child.text}</a>
+			<a sveltekit:noscroll class:active={$page.path == child.link} href={child.link}
+				>{child.text}</a
+			>
 		{/each}
 	{/each}
 </nav>

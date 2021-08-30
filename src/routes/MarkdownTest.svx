@@ -1,10 +1,6 @@
 ---
 title: 'Markdown Test'
-toc: false
 ---
-
-Markdown: Syntax
-================
 
 *   [Overview](#overview)
     *   [Philosophy](#philosophy)

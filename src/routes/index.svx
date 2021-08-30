@@ -2,8 +2,6 @@
 title: 'Hello world'
 ---
 
-# Hello world! 
-
 ## Introduction
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -126,3 +124,5 @@ Sit amet facilisis magna etiam. Dolor sit amet consectetur adipiscing elit. Sit 
 ## It be like that
 
 Lobortis feugiat vivamus at augue eget arcu. Id semper risus in hendrerit gravida rutrum quisque. Sapien pellentesque habitant morbi tristique senectus. Dictum varius duis at consectetur lorem donec massa sapien. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Sit amet risus nullam eget. Aliquam ut porttitor leo a diam sollicitudin. Est velit egestas dui id ornare arcu odio. Adipiscing diam donec adipiscing tristique. Egestas congue quisque egestas diam in.
+
+

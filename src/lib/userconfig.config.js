@@ -23,6 +23,10 @@ const userconfig = {
 				{
 					text: 'Markdown Test',
 					link: '/MarkdownTest'
+				},
+				{
+					text: 'HTML Test',
+					link: '/HtmlTest'
 				}
 			]
 		}

@@ -60,7 +60,7 @@
 		text-decoration: none;
 		font-size: 0.95rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.075);
-		transition: border-left 0.25s, color 0.25s;
+		transition: color 0.25s;
 	}
 
 	.toc-link:hover {
@@ -86,7 +86,6 @@
 	/* Highlight current anchor */
 	.toc-active {
 		color: rgb(79, 70, 229) !important;
-		border-left: 2px solid rgb(79, 70, 229);
 		font-weight: 500;
 	}
 
