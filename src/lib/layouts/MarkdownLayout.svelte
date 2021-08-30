@@ -134,11 +134,6 @@
 		font-weight: 500;
 	}
 
-	.markdown :global(li:not(:last-child)) {
-		margin-bottom: 0.75rem;
-		margin-top: 0.75rem;
-	}
-
 	.markdown :global(table) {
 		border-collapse: collapse;
 		table-layout: fixed;
@@ -159,6 +154,11 @@
 		padding-right: 0.75rem;
 		padding-top: 0.875rem;
 		padding-bottom: 0.875rem;
+	}
+
+	.markdown :global(li:not(:last-child)) {
+		margin-bottom: 0.75rem;
+		margin-top: 0.75rem;
 	}
 
 	.markdown :global(code:not([class])) {

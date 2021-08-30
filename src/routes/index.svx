@@ -43,8 +43,8 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 <html>
 <body>
 
-<h1 style="color:blue;">This is a heading</h1>
-<p style="color:red;">This is a paragraph.</p>
+<h1 style="color: blue;">This is a heading</h1>
+<p style="color: red;">This is a paragraph.</p>
 
 </body>
 </html>
