@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { headingsList } from '$lib/stores/headingsList';
+	export let headings = [];
 
 	let curAnchor = -1;
 	let scrollY: number;
@@ -10,16 +10,13 @@
 	function updateAnchor(_dummy) {
 		const offsetTop = 105;
 
-		for (let i = 0; i < $headingsList.length; i++) {
+		for (let i = 0; i < headings.length; i++) {
 			if (
-				$headingsList[i].getBoundingClientRect().top < offsetTop &&
-				$headingsList[i].getBoundingClientRect().top > 0
+				headings[i].getBoundingClientRect().top < offsetTop &&
+				headings[i].getBoundingClientRect().top > 0
 			) {
 				curAnchor = i;
-			} else if (
-				curAnchor >= 0 &&
-				$headingsList[curAnchor].getBoundingClientRect().top > offsetTop
-			) {
+			} else if (curAnchor >= 0 && headings[curAnchor].getBoundingClientRect().top > offsetTop) {
 				curAnchor -= 1;
 			}
 		}
@@ -30,8 +27,8 @@
 
 <h4>ON THIS PAGE</h4>
 
-{#if $headingsList.length}
-	{#each $headingsList as heading, i}
+{#if headings.length}
+	{#each headings as heading, i}
 		<a
 			class="toc-link"
 			class:toc-link-h2={heading.nodeName == 'H2'}

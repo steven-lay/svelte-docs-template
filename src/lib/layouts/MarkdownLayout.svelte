@@ -1,8 +1,17 @@
 <script lang="ts">
-	import { getHeadings } from '$lib/utils/getHeadings';
+	import TableOfContents from '$lib/components/TableOfContents.svelte';
+	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
+	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
 	import userconfig from '$lib/userconfig.config';
 
 	export let title = '';
+	export let toc = true;
+
+	let headings = [];
+
+	function getHeadings(node) {
+		headings = node.querySelectorAll('h2, h3');
+	}
 
 	const siteTitle = userconfig.title || 'My Docs Site';
 	const pageTitle = title.length ? `${title} - ${siteTitle}` : siteTitle;
@@ -12,13 +21,53 @@
 	<title>{pageTitle}</title>
 </svelte:head>
 
-<article use:getHeadings class="markdown">
-	<slot />
-</article>
+<TransitionWrapper>
+	<div class="flex-wrap">
+		<article use:getHeadings class="markdown">
+			<slot />
+			<MarkdownFooter />
+		</article>
+		{#if toc}
+			<div class="toc">
+				<TableOfContents {headings} />
+			</div>
+		{/if}
+	</div>
+</TransitionWrapper>
 
 <style>
 	@import '$lib/styles/admonition-classic.css';
 	@import '$lib/styles/prism.css';
+
+	.flex-wrap {
+		display: flex;
+	}
+
+	.markdown {
+		flex: auto;
+		width: 75%;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.toc {
+		position: sticky;
+		top: 5.5rem;
+		align-self: flex-start;
+		width: 25%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	@media screen and (max-width: 992px) {
+		.markdown {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.toc {
+			display: none;
+		}
+	}
 
 	.markdown :global(blockquote) {
 		background-color: rgba(0, 0, 0, 0.025);
@@ -40,6 +89,7 @@
 		margin-top: 0;
 		margin-bottom: 1rem;
 		font-size: 2.25rem;
+		font-weight: 600;
 		color: rgb(49, 46, 129);
 	}
 
@@ -51,7 +101,11 @@
 		padding-top: 1rem;
 		padding-bottom: 0.5rem;
 		margin-bottom: 0;
-		border-bottom: solid 1px rgba(233, 236, 239, 1);
+		border-bottom: solid 1px rgb(233, 236, 239);
+	}
+
+	.markdown :global(hr) {
+		border-top: 1px solid rgb(225, 225, 225);
 	}
 
 	.markdown :global(h3) {
@@ -76,7 +130,7 @@
 	}
 
 	.markdown :global(strong) {
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.markdown :global(li:not(:last-child)) {
@@ -109,7 +163,7 @@
 	.markdown :global(code:not([class])) {
 		background-color: rgba(0, 0, 0, 0.05);
 		color: rgba(0, 0, 0, 0.8);
-		padding: 0.2rem;
+		padding: 0.05rem;
 		font-size: 0.9rem;
 	}
 </style>

@@ -10,6 +10,21 @@ const userconfig = {
 			text: 'Test',
 			link: 'http://www.google.com/'
 		}
+	],
+	sidebar: [
+		{
+			category: 'Heading 1',
+			children: [
+				{
+					text: 'Home',
+					link: '/'
+				},
+				{
+					text: 'Markdown Test',
+					link: '/MarkdownTest'
+				}
+			]
+		}
 	]
 };
 

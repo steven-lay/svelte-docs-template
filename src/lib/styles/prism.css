@@ -44,8 +44,7 @@
 	 padding: 1em;
 	 margin: .5em 0;
 	 overflow: auto;
-	 border: 1px solid #dddddd;
-	 background-color: white;
+	 background-color: rgb(250, 250, 250);
  }
  
  /* Inline code */

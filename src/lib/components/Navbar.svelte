@@ -40,7 +40,7 @@
 		align-items: center;
 		padding-top: 1.125rem;
 		padding-bottom: 1.125rem;
-		padding-left: 1rem;
+		padding-left: 1.75rem;
 		padding-right: 1rem;
 	}
 
