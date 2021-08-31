@@ -14,7 +14,7 @@ const userconfig = {
 	],
 	sidebar: [
 		{
-			category: 'Heading 1',
+			category: 'Introduction',
 			children: [
 				{
 					text: 'Home',
