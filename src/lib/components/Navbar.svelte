@@ -38,8 +38,8 @@
 		margin-right: auto;
 		max-width: 88rem;
 		align-items: center;
-		padding-top: 1.125rem;
-		padding-bottom: 1.125rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		padding-left: 1.125rem;
 		padding-right: 1rem;
 	}
@@ -72,6 +72,7 @@
 	.nav-title {
 		margin-right: 2rem;
 		font-weight: 700;
+		font-size: 1.125rem;
 		color: rgb(49, 46, 129);
 	}
 

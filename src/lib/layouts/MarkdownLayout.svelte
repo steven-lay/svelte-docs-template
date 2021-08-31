@@ -3,15 +3,14 @@
 	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
 	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
 	import userconfig from '$lib/userconfig.config';
+	import { headingsList } from '$lib/stores/getHeadings';
 
 	/* Frontmatter variables */
 	export let title = '';
 	export let hide_toc = false;
 
-	let headings = [];
-
 	function getHeadings(node) {
-		headings = node.querySelectorAll('h2, h3');
+		headingsList.set(node.querySelectorAll('h2, h3'));
 	}
 
 	const siteTitle = userconfig.title || 'My Docs Site';
@@ -31,7 +30,7 @@
 		</article>
 		{#if !hide_toc}
 			<div class="toc">
-				<TableOfContents {headings} />
+				<TableOfContents />
 			</div>
 		{/if}
 	</div>

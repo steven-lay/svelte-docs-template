@@ -93,7 +93,7 @@
 
 .admonition-important {
 	background-color: rgba(52, 152, 219, 0.075);
-	border-left: 8px solid #3498db;
+	border-left: 4px solid #3498db;
 }
 
 .admonition-important h5 {
@@ -117,4 +117,8 @@
 .admonition-note .admonition-icon svg {
 	stroke: #f1c40f;
 	fill: #f1c40f;
+}
+
+.admonition-content > p {
+	margin-block-start: 0;
 }

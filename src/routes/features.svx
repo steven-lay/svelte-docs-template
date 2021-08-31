@@ -1,0 +1,109 @@
+---
+title: 'Features'
+---
+
+## Admonitions
+
+Powered by [remark-admonitions](https://github.com/elviswolcott/remark-admonitions),
+there is support to display different types of Admonitions. A slightly modified version
+of the [classic theme](https://github.com/elviswolcott/remark-admonitions/blob/master/styles/classic.css)
+is used.
+
+
+### Tip
+
+:::tip Tip
+I like eating fried chicken.
+:::
+
+```markdown
+:::tip Tip
+I like eating fried chicken.
+:::
+```
+
+### Note
+
+:::note Note
+This is a note
+:::
+
+```markdown
+:::note Note
+This is a note
+:::
+```
+
+### Important
+
+:::important Important
+This is very important
+:::
+
+```markdown
+:::important Important
+This is very important
+:::
+```
+
+### Warning
+
+:::warning Warning
+Drinking boiling water will burn your tongue
+:::
+
+```markdown
+:::warning Warning
+Drinking boiling water will burn your tongue
+:::
+```
+
+## Code block highlighting
+
+[mdsvex](https://mdsvex.com/) supports the use of [PrismJS](https://prismjs.com/) 
+to highlight myriads of different languages.
+
+### General syntax
+
+<pre class="language-html">
+<code class="language-html">
+```js
+console.log('Hello, World!')
+```
+</code>
+</pre>
+
+<caption>Result:</caption>
+
+```js
+console.log('Hello, World!')
+```
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color: blue;">This is a heading</h1>
+<p style="color: red;">This is a paragraph.</p>
+
+</body>
+</html>
+```
+
+### Javascript
+
+```js
+(async () => {
+	try {
+		await rest.put(
+			Routes.applicationCommands(clientId),
+			{ body: commands },
+		);
+	} catch (error) {
+		console.error(error);
+	}
+})();
+```

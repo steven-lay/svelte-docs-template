@@ -1,6 +1,6 @@
 /** @type {import('$lib/types/types').userconfig} */
 const userconfig = {
-	title: 'My website',
+	title: 'My docs site',
 	preloadRoutes: true,
 	navbar: [
 		{
@@ -21,12 +21,16 @@ const userconfig = {
 					link: '/'
 				},
 				{
+					text: 'Features',
+					link: '/features'
+				},
+				{
 					text: 'Markdown Test',
-					link: '/MarkdownTest'
+					link: '/markdown-test'
 				},
 				{
 					text: 'HTML Test',
-					link: '/HtmlTest'
+					link: '/html-test'
 				}
 			]
 		}

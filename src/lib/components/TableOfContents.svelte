@@ -1,5 +1,12 @@
 <script lang="ts">
-	export let headings = [];
+	import { headingsList } from '$lib/stores/getHeadings';
+	import { onMount } from 'svelte';
+
+	let headings = [];
+
+	onMount(() => {
+		headings = $headingsList;
+	});
 
 	let curAnchor = -1;
 	let scrollY: number;

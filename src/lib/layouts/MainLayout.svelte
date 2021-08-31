@@ -21,9 +21,7 @@
 	</aside>
 	<!-- Markdown layout and Table of Contents -->
 	<div class="main-layout">
-		<div>
-			<slot />
-		</div>
+		<slot />
 	</div>
 </div>
 
@@ -36,7 +34,6 @@
 	}
 
 	.main-layout {
-		display: flex;
 		width: 80%;
 		flex: auto;
 	}

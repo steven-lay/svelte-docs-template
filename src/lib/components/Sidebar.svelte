@@ -31,7 +31,7 @@
 		padding-bottom: 0.5rem;
 		margin-right: 3rem;
 		font-weight: 500;
-		color: rgba(0, 0, 0, 0.9);
+		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
 		transition: background-color 0.3s;
 	}
