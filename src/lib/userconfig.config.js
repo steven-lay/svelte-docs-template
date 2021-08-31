@@ -33,6 +33,19 @@ const userconfig = {
 					link: '/html-test'
 				}
 			]
+		},
+		{
+			category: 'Test',
+			children: [
+				{
+					text: 'Test 1',
+					link: '/Foo'
+				},
+				{
+					text: 'Test 2',
+					link: '/bar'
+				}
+			]
 		}
 	]
 };

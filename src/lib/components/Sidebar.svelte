@@ -11,10 +11,15 @@
 				>{child.text}</a
 			>
 		{/each}
+		<div class="divider" />
 	{/each}
 </nav>
 
 <style>
+	.divider {
+		padding-bottom: 1.5rem;
+	}
+
 	h4 {
 		margin-top: 0;
 		margin-bottom: 0.5rem;
