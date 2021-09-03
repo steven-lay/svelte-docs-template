@@ -1,12 +1,5 @@
 <script lang="ts">
-	import { headingsList } from '$lib/stores/getHeadings';
-	import { onMount } from 'svelte';
-
-	let headings = [];
-
-	onMount(() => {
-		headings = $headingsList;
-	});
+	export let headingsList = [];
 
 	let curAnchor = -1;
 	let scrollY: number;
@@ -17,13 +10,18 @@
 	function updateAnchor(_dummy) {
 		const offsetTop = 105;
 
-		for (let i = 0; i < headings.length; i++) {
+		if (!headingsList.length) return;
+
+		for (let i = 0; i < headingsList.length; i++) {
 			if (
-				headings[i].getBoundingClientRect().top < offsetTop &&
-				headings[i].getBoundingClientRect().top > 0
+				headingsList[i].getBoundingClientRect().top < offsetTop &&
+				headingsList[i].getBoundingClientRect().top > 0
 			) {
 				curAnchor = i;
-			} else if (curAnchor >= 0 && headings[curAnchor].getBoundingClientRect().top > offsetTop) {
+			} else if (
+				curAnchor >= 0 &&
+				headingsList[curAnchor].getBoundingClientRect().top > offsetTop
+			) {
 				curAnchor -= 1;
 			}
 		}
@@ -34,8 +32,8 @@
 
 <h4>ON THIS PAGE</h4>
 
-{#if headings.length}
-	{#each headings as heading, i}
+{#if headingsList.length}
+	{#each headingsList as heading, i}
 		<a
 			class="toc-link"
 			class:toc-link-h2={heading.nodeName == 'H2'}
