@@ -15,11 +15,12 @@
 		<h4>{sidebarEntry.category}</h4>
 		{#each sidebarEntry.children as child}
 			<a
-				sveltekit:noscroll
+				sveltekit:prefetch={child.link.startsWith('http') ? undefined : true}
 				class:active={$page.path == child.link}
 				href={child.link}
-				target={child.link.startsWith('http') ? '_blank' : ''}
+				target={child.link.startsWith('http') ? '_blank' : undefined}
 				on:click={() => closeOffcanvas()}
+				sveltekit:noscroll
 			>
 				{child.text}
 			</a>

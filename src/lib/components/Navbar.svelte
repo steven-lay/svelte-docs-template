@@ -11,15 +11,17 @@
 		<div class="nav-button" on:click={() => openOffCanvas.set(true)}>
 			<MdDehaze />
 		</div>
-		<div class="nav-title">
-			{userconfig.title}
+		<div>
+			<a class="nav-title" href="/">
+				{userconfig.title}
+			</a>
 		</div>
 		<nav class="nav-group">
 			{#each userconfig.navbar as navitem}
 				<a
-					sveltekit:prefetch
+					sveltekit:prefetch={navitem.link.startsWith('http') ? undefined : true}
 					class="nav-link"
-					target={navitem.link.startsWith('http') ? '_blank' : ''}
+					target={navitem.link.startsWith('http') ? '_blank' : undefined}
 					href={navitem.link}
 				>
 					{navitem.text}
@@ -79,6 +81,7 @@
 		margin-right: 2rem;
 		font-weight: 700;
 		font-size: 1.125rem;
+		text-decoration: none;
 		color: rgb(49, 46, 129);
 	}
 

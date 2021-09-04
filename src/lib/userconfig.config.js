@@ -14,6 +14,10 @@ const userconfig = {
 		{
 			text: 'Test',
 			link: 'http://www.google.com/'
+		},
+		{
+			text: 'Blog',
+			link: '/blog'
 		}
 	],
 	sidebar: [

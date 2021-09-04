@@ -186,6 +186,7 @@
 
 	.markdown :global(a) {
 		color: rgb(89, 83, 190);
+		font-weight: 500;
 		text-decoration: none;
 	}
 
