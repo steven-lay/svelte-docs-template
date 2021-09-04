@@ -3,14 +3,14 @@
 
 	let showLoadingBar = false;
 
-	let timer;
+	let timer: NodeJS.Timeout;
 
+	/* If it takes more than 100 ms to load another page, show loading bar */
 	getStores().navigating.subscribe((nav) => {
 		/* If navigating to a different page */
 		if (nav?.from.path != nav?.to.path) {
 			clearTimeout(timer);
 			timer = setTimeout(() => {
-				console.log('hey');
 				showLoadingBar = true;
 			}, 100);
 		} else {
