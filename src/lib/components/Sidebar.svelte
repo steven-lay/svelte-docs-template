@@ -18,6 +18,7 @@
 				sveltekit:noscroll
 				class:active={$page.path == child.link}
 				href={child.link}
+				target={child.link.startsWith('http') ? '_blank' : ''}
 				on:click={() => closeOffcanvas()}
 			>
 				{child.text}

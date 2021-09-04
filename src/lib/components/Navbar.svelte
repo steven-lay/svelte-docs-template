@@ -16,7 +16,12 @@
 		</div>
 		<nav class="nav-group">
 			{#each userconfig.navbar as navitem}
-				<a sveltekit:prefetch class="nav-link" href={navitem.link}>
+				<a
+					sveltekit:prefetch
+					class="nav-link"
+					target={navitem.link.startsWith('http') ? '_blank' : ''}
+					href={navitem.link}
+				>
 					{navitem.text}
 				</a>
 			{/each}
