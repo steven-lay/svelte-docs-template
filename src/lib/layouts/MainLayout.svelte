@@ -7,7 +7,7 @@
 	import { browser } from '$app/env';
 	import { hideSidenav } from '$lib/stores/hideSidenav';
 
-	const hideLoadbar = !config.hideLoadbar ?? true;
+	const hideLoadbar = config.hideLoadbar ?? false;
 	const pageWidth = config.pageWidth ?? 88;
 	const preloadRoutes = config.preloadRoutes ?? false;
 
