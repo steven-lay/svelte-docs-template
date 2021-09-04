@@ -1,13 +1,20 @@
 <script lang="ts">
-	import { navigating } from '$app/stores';
+	import { getStores } from '$app/stores';
 
 	let showLoadingBar = false;
 
-	navigating.subscribe(async (nav) => {
+	let timer;
+
+	getStores().navigating.subscribe((nav) => {
 		/* If navigating to a different page */
 		if (nav?.from.path != nav?.to.path) {
-			showLoadingBar = true;
+			clearTimeout(timer);
+			timer = setTimeout(() => {
+				console.log('hey');
+				showLoadingBar = true;
+			}, 100);
 		} else {
+			clearTimeout(timer);
 			showLoadingBar = false;
 		}
 	});
