@@ -21,7 +21,7 @@
 			<div class="footer-page-text">Previous page</div>
 			<div>
 				<a sveltekit:noscroll href={childLinks[curPos - 1].link}>
-					<span class="arrow-left">←</span><span class="arrow-text"
+					<span class="arrow arrow-left">←</span><span class="arrow-text"
 						>{childLinks[curPos - 1].text}</span
 					>
 				</a>
@@ -33,8 +33,8 @@
 			<div class="footer-page-text">Next page</div>
 			<div>
 				<a sveltekit:noscroll href={childLinks[curPos + 1].link}>
-					<span class="arrow-text">{childLinks[curPos + 1].text}</span><span class="arrow-right"
-						>→</span
+					<span class="arrow-text">{childLinks[curPos + 1].text}</span><span
+						class="arrow arrow-right">→</span
 					>
 				</a>
 			</div>
@@ -58,16 +58,17 @@
 		text-align: right;
 	}
 
-	.arrow-left {
-		margin-right: 0.5rem;
+	.arrow {
 		font-size: 1.375rem;
 		color: rgb(79, 70, 229);
 	}
 
+	.arrow-left {
+		margin-right: 0.5rem;
+	}
+
 	.arrow-right {
 		margin-left: 0.5rem;
-		font-size: 1.375rem;
-		color: rgb(79, 70, 229);
 	}
 
 	hr {
@@ -93,5 +94,27 @@
 		font-size: 1.125rem;
 		font-weight: 500;
 		color: rgb(79, 70, 229);
+	}
+
+	@media only screen and (max-width: 425px) {
+		.footer-page-text {
+			font-size: 0.875rem;
+		}
+
+		.arrow-text {
+			font-size: 1rem;
+		}
+
+		.arrow {
+			font-size: 1.125rem;
+		}
+
+		.arrow-right {
+			margin-left: 0.25rem;
+		}
+
+		.arrow-left {
+			margin-right: 0.25rem;
+		}
 	}
 </style>
