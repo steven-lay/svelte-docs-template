@@ -4,6 +4,7 @@ const userconfig = {
 	preloadRoutes: false,
 	hideTOC: false,
 	hideLoadbar: false,
+	pageWidth: 88,
 	TOCdepth: 2,
 	navbar: [
 		{

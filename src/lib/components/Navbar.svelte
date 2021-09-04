@@ -2,10 +2,12 @@
 	import MdDehaze from 'svelte-icons/md/MdDehaze.svelte';
 	import userconfig from '$lib/userconfig.config';
 	import { openOffCanvas } from '$lib/stores/openOffcanvas';
+
+	export let pageWidth;
 </script>
 
 <header class="header">
-	<div class="nav-container">
+	<div class="nav-container" style="max-width: {pageWidth}rem">
 		<div class="nav-button" on:click={() => openOffCanvas.set(true)}>
 			<MdDehaze />
 		</div>
@@ -36,7 +38,6 @@
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 88rem;
 		align-items: center;
 		padding-top: 1rem;
 		padding-bottom: 1rem;

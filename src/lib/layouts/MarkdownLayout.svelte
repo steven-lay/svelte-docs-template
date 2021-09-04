@@ -5,7 +5,7 @@
 	import config from '$lib/userconfig.config';
 
 	/* Frontmatter variables */
-	export let title;
+	export let title: string;
 	export let hide_toc = false;
 
 	let headingsList;
@@ -14,20 +14,18 @@
 
 	let pageTitle = siteTitle;
 
-	let markdownTitle;
+	let markdownTitle: HTMLHeadingElement;
 
-	function getHeadings(node) {
-		const configDepth = config.TOCdepth ?? 2;
-		let depth = 'h2';
+	function getHeadings(node: HTMLElement) {
+		const depth = config.TOCdepth ?? 2;
 
-		if (configDepth == 2) {
-			depth += ',h3';
-		} else if (configDepth == 3) {
-			depth += ',h3,h4';
-		} else if (configDepth == 4) {
-			depth += ',h3,h4,h5';
+		let selectHeadings = 'h2';
+
+		for (let i = 1; i < depth; i++) {
+			selectHeadings += `,h${i + 2}`;
 		}
-		headingsList = node.querySelectorAll(depth);
+
+		headingsList = node.querySelectorAll(selectHeadings);
 
 		markdownTitle = node.querySelector('h1');
 		pageTitle = (title ?? markdownTitle?.textContent) + ' - ' + siteTitle;

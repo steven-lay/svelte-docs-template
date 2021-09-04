@@ -11,6 +11,7 @@
 	}
 
 	const showLoadbar = !config.hideLoadbar ?? true;
+	let pageWidth = config.pageWidth ?? 88;
 </script>
 
 {#if showLoadbar}
@@ -19,10 +20,10 @@
 	{/await}
 {/if}
 
-<Navbar />
+<Navbar {pageWidth} />
 <Offcanvas />
 
-<div class="screen-layout">
+<div class="screen-layout" style="max-width: {pageWidth}rem">
 	<aside class="aside-sidebar">
 		<Sidebar />
 	</aside>

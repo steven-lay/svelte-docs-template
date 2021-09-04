@@ -5,6 +5,7 @@ export interface userconfig {
 	preloadRoutes?: boolean;
 	hideLoadbar?: boolean;
 	hideTOC?: boolean;
+	pageWidth?: number;
 	TOCdepth?: number;
 }
 
