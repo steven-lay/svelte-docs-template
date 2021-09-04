@@ -2,7 +2,6 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Offcanvas from '$lib/components/Offcanvas.svelte';
-	import LoadingBar from '$lib/components/LoadingBar.svelte';
 	import config from '$lib/userconfig.config';
 	import { openOffCanvas } from '$lib/stores/openOffcanvas';
 	import { prefetchRoutes } from '$app/navigation';
@@ -13,7 +12,11 @@
 	}
 </script>
 
-<LoadingBar />
+{#if config.showLoadbar}
+	{#await import('$lib/components/LoadingBar.svelte') then LoadingBar}
+		<svelte:component this={LoadingBar.default} />
+	{/await}
+{/if}
 
 <Navbar />
 <Offcanvas />

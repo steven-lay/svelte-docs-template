@@ -3,6 +3,7 @@ export interface userconfig {
 	navbar?: Array<navbarItem>;
 	sidebar?: Array<sidebarItem>;
 	preloadRoutes?: boolean;
+	showLoadbar?: boolean;
 }
 
 interface navbarItem {
