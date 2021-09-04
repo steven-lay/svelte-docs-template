@@ -14,7 +14,7 @@
 		headingsList = node.querySelectorAll('h2, h3');
 	}
 
-	const siteTitle = userconfig.title || 'My Docs Site';
+	const siteTitle = userconfig.title ?? 'My Docs Site';
 	const pageTitle = title.length ? `${title} - ${siteTitle}` : siteTitle;
 </script>
 

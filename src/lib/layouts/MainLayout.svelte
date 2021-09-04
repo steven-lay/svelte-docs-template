@@ -9,9 +9,11 @@
 	if (config.preloadRoutes && browser) {
 		prefetchRoutes();
 	}
+
+	const showLoadbar = config.showLoadbar ?? true;
 </script>
 
-{#if config.showLoadbar}
+{#if showLoadbar}
 	{#await import('$lib/components/LoadingBar.svelte') then LoadingBar}
 		<svelte:component this={LoadingBar.default} />
 	{/await}
