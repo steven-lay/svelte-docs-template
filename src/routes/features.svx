@@ -2,6 +2,8 @@
 title: 'Features'
 ---
 
+# Features
+
 ## Admonitions
 
 Powered by [remark-admonitions](https://github.com/elviswolcott/remark-admonitions),

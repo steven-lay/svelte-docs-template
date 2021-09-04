@@ -2,20 +2,36 @@
 	import TableOfContents from '$lib/components/TableOfContents.svelte';
 	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
 	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
-	import userconfig from '$lib/userconfig.config';
+	import config from '$lib/userconfig.config';
 
 	/* Frontmatter variables */
-	export let title = '';
+	export let title;
 	export let hide_toc = false;
 
 	let headingsList;
 
-	function getHeadings(node) {
-		headingsList = node.querySelectorAll('h2, h3');
-	}
+	const siteTitle = config.title ?? 'My Docs Site';
 
-	const siteTitle = userconfig.title ?? 'My Docs Site';
-	const pageTitle = title.length ? `${title} - ${siteTitle}` : siteTitle;
+	let pageTitle = siteTitle;
+
+	let markdownTitle;
+
+	function getHeadings(node) {
+		const configDepth = config.TOCdepth ?? 2;
+		let depth = 'h2';
+
+		if (configDepth == 2) {
+			depth += ',h3';
+		} else if (configDepth == 3) {
+			depth += ',h3,h4';
+		} else if (configDepth == 4) {
+			depth += ',h3,h4,h5';
+		}
+		headingsList = node.querySelectorAll(depth);
+
+		markdownTitle = node.querySelector('h1');
+		pageTitle = (title ?? markdownTitle?.textContent) + ' - ' + siteTitle;
+	}
 </script>
 
 <svelte:head>
@@ -25,7 +41,6 @@
 <TransitionWrapper>
 	<div class="flex-wrap">
 		<article use:getHeadings class="markdown">
-			<h1>{title}</h1>
 			<slot />
 			<MarkdownFooter />
 		</article>

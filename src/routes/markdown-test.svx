@@ -2,6 +2,8 @@
 title: 'Markdown Test'
 ---
 
+# Markdown Test
+
 *   [Overview](#overview)
     *   [Philosophy](#philosophy)
     *   [Inline HTML](#html)

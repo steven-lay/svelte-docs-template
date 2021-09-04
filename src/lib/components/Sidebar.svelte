@@ -1,15 +1,27 @@
 <script>
 	import config from '$lib/userconfig.config';
 	import { page } from '$app/stores';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function closeOffcanvas() {
+		dispatch('closeOffcanvas');
+	}
 </script>
 
 <nav>
 	{#each config.sidebar as sidebarEntry}
 		<h4>{sidebarEntry.category}</h4>
 		{#each sidebarEntry.children as child}
-			<a sveltekit:noscroll class:active={$page.path == child.link} href={child.link}
-				>{child.text}</a
+			<a
+				sveltekit:noscroll
+				class:active={$page.path == child.link}
+				href={child.link}
+				on:click={() => closeOffcanvas()}
 			>
+				{child.text}
+			</a>
 		{/each}
 		<div class="divider" />
 	{/each}

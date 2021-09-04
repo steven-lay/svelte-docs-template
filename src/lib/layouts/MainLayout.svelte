@@ -10,7 +10,7 @@
 		prefetchRoutes();
 	}
 
-	const showLoadbar = config.showLoadbar ?? true;
+	const showLoadbar = !config.hideLoadbar ?? true;
 </script>
 
 {#if showLoadbar}
@@ -48,21 +48,22 @@
 		width: 20%;
 	}
 
-	@media screen and (max-width: 992px) {
-		.aside-sidebar {
-			display: none;
-		}
-	}
-
 	.screen-layout {
 		display: flex;
 		max-width: 88rem;
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding: 2rem 1rem;
 		transition: filter 0.25s;
+	}
+
+	@media screen and (max-width: 992px) {
+		.aside-sidebar {
+			display: none;
+		}
+
+		.screen-layout {
+			padding-top: 1.5rem;
+		}
 	}
 </style>

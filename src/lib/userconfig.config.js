@@ -2,6 +2,9 @@
 const userconfig = {
 	title: 'My docs site',
 	preloadRoutes: false,
+	hideTOC: false,
+	hideLoadbar: false,
+	TOCdepth: 2,
 	navbar: [
 		{
 			text: 'Github',
