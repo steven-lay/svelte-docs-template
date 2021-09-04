@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	overflow-y: scroll; 
+	overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {

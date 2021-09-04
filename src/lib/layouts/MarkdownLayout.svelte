@@ -5,18 +5,18 @@
 	import config from '$lib/userconfig.config';
 
 	/* Frontmatter variables */
-	export let title: string;
+	export let title = '';
 	export let hide_toc = false;
 
 	let headingsList;
 
-	const siteTitle = config.title ?? 'My Docs Site';
+	let siteTitle = config.title ?? 'My Docs Site';
 
 	let pageTitle = siteTitle;
 
 	let markdownTitle: HTMLHeadingElement;
 
-	function getHeadings(node: HTMLElement) {
+	function getHeadings(node) {
 		const depth = config.TOCdepth ?? 2;
 
 		let selectHeadings = 'h2';
