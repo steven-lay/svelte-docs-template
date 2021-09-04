@@ -46,6 +46,6 @@
 		z-index: 50;
 		position: fixed;
 		height: 2px;
-		background-color: indigo;
+		background-color: rgb(169, 127, 199);
 	}
 </style>

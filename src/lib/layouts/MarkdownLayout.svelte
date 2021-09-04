@@ -86,12 +86,12 @@
 	}
 
 	.markdown :global(blockquote) {
-		background-color: rgba(0, 0, 0, 0.025);
+		background-color: rgba(0, 0, 0, 0.02);
 		margin-left: 0;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 		padding: 0.1rem 0.5rem 0.1rem 1rem;
-		border-left: 4px solid gray;
+		border-left: 3px solid rgb(206, 206, 206);
 		width: 100%;
 	}
 
@@ -181,7 +181,7 @@
 		background-color: rgba(0, 0, 0, 0.05);
 		color: rgba(0, 0, 0, 0.8);
 		padding: 0.05rem;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 	}
 
 	.markdown :global(a) {
