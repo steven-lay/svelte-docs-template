@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import TableOfContents from '$lib/components/TableOfContents.svelte';
 	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
 	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
@@ -14,7 +14,7 @@
 
 	let pageTitle = siteTitle;
 
-	let markdownTitle: HTMLHeadingElement;
+	let markdownTitle;
 
 	function getHeadings(node) {
 		const depth = config.TOCdepth ?? 2;
