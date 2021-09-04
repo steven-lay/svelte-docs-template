@@ -1,7 +1,7 @@
 /** @type {import('$lib/types/types').userconfig} */
 const userconfig = {
 	title: 'My docs site',
-	preloadRoutes: true,
+	preloadRoutes: false,
 	navbar: [
 		{
 			text: 'Github',
@@ -31,19 +31,6 @@ const userconfig = {
 				{
 					text: 'HTML Test',
 					link: '/html-test'
-				}
-			]
-		},
-		{
-			category: 'Test',
-			children: [
-				{
-					text: 'Test 1',
-					link: '/Foo'
-				},
-				{
-					text: 'Test 2',
-					link: '/bar'
 				}
 			]
 		}
