@@ -3,16 +3,21 @@
 	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
 	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
 	import config from '$lib/userconfig.config';
+	import { hideSidenav } from '$lib/stores/hideSidenav';
 
 	/* Frontmatter variables */
 	export let title;
 	export let hide_toc;
+	export let hide_sidenav = false;
 
 	const hideTOC = hide_toc ?? config.hideTOC ?? false;
-
-	let headingsList;
-	let siteTitle = config.title ?? 'My Docs Site';
+	const siteTitle = config.title ?? 'My Docs Site';
 	let pageTitle = siteTitle;
+	let headingsList;
+
+	if (hide_toc) {
+		hideSidenav.set(hide_sidenav);
+	}
 
 	function getHeadings(node) {
 		const depth = config.TOCdepth ?? 2;
@@ -23,7 +28,7 @@
 			selectHeadings += `,h${i + 2}`;
 		}
 
-		let markdownTitle = node.querySelector('h1');
+		const markdownTitle = node.querySelector('h1');
 
 		headingsList = node.querySelectorAll(selectHeadings);
 		pageTitle = (title ?? markdownTitle?.textContent) + ' - ' + siteTitle;

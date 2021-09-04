@@ -5,6 +5,7 @@
 	import config from '$lib/userconfig.config';
 	import { prefetchRoutes } from '$app/navigation';
 	import { browser } from '$app/env';
+	import { hideSidenav } from '$lib/stores/hideSidenav';
 
 	const hideLoadbar = !config.hideLoadbar ?? true;
 	const pageWidth = config.pageWidth ?? 88;
@@ -25,13 +26,15 @@
 <Offcanvas />
 
 <div class="screen-layout" style="max-width: {pageWidth}rem">
-	<aside class="aside-sidebar">
-		<Sidebar />
-	</aside>
+	{#if !$hideSidenav}
+		<aside class="aside-sidebar">
+			<Sidebar />
+		</aside>
+	{/if}
 	<!-- Markdown layout and Table of Contents -->
-	<div class="main-layout">
+	<main class="main-layout">
 		<slot />
-	</div>
+	</main>
 </div>
 
 <style>
