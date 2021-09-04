@@ -3,7 +3,7 @@
 
 	let showLoadingBar = false;
 
-	navigating.subscribe((nav) => {
+	navigating.subscribe(async (nav) => {
 		/* If navigating to a different page */
 		if (nav?.from.path != nav?.to.path) {
 			showLoadingBar = true;
