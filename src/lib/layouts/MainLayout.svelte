@@ -6,15 +6,16 @@
 	import { prefetchRoutes } from '$app/navigation';
 	import { browser } from '$app/env';
 
-	if (config.preloadRoutes && browser) {
+	const hideLoadbar = !config.hideLoadbar ?? true;
+	const pageWidth = config.pageWidth ?? 88;
+	const preloadRoutes = config.preloadRoutes ?? false;
+
+	if (preloadRoutes && browser) {
 		prefetchRoutes();
 	}
-
-	const showLoadbar = !config.hideLoadbar ?? true;
-	let pageWidth = config.pageWidth ?? 88;
 </script>
 
-{#if showLoadbar}
+{#if !hideLoadbar}
 	{#await import('$lib/components/LoadingBar.svelte') then LoadingBar}
 		<svelte:component this={LoadingBar.default} />
 	{/await}

@@ -6,6 +6,11 @@ const userconfig = {
 	hideLoadbar: false,
 	pageWidth: 88,
 	TOCdepth: 2,
+	pageTransitions: {
+		enabled: true,
+		inDuration: 500,
+		outDuration: 300,
+	},
 	navbar: [
 		{
 			text: 'Github',

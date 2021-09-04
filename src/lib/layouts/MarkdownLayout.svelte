@@ -5,16 +5,14 @@
 	import config from '$lib/userconfig.config';
 
 	/* Frontmatter variables */
-	export let title = '';
-	export let hide_toc = false;
+	export let title;
+	export let hide_toc;
+
+	const hideTOC = hide_toc ?? config.hideTOC ?? false;
 
 	let headingsList;
-
 	let siteTitle = config.title ?? 'My Docs Site';
-
 	let pageTitle = siteTitle;
-
-	let markdownTitle;
 
 	function getHeadings(node) {
 		const depth = config.TOCdepth ?? 2;
@@ -25,9 +23,9 @@
 			selectHeadings += `,h${i + 2}`;
 		}
 
-		headingsList = node.querySelectorAll(selectHeadings);
+		let markdownTitle = node.querySelector('h1');
 
-		markdownTitle = node.querySelector('h1');
+		headingsList = node.querySelectorAll(selectHeadings);
 		pageTitle = (title ?? markdownTitle?.textContent) + ' - ' + siteTitle;
 	}
 </script>
@@ -42,7 +40,7 @@
 			<slot />
 			<MarkdownFooter />
 		</article>
-		{#if !hide_toc}
+		{#if !hideTOC}
 			<div class="toc">
 				<TableOfContents {headingsList} />
 			</div>
@@ -163,7 +161,7 @@
 
 	.markdown :global(th) {
 		color: rgb(49, 46, 129);
-		background-color: #e7ddee;
+		background-color: rgb(198, 201, 231);
 		text-align: left;
 		padding: 0.75rem;
 	}
