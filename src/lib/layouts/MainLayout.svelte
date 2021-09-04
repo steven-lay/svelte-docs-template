@@ -3,7 +3,6 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Offcanvas from '$lib/components/Offcanvas.svelte';
 	import config from '$lib/userconfig.config';
-	import { openOffCanvas } from '$lib/stores/openOffcanvas';
 	import { prefetchRoutes } from '$app/navigation';
 	import { browser } from '$app/env';
 
@@ -21,7 +20,7 @@
 <Navbar />
 <Offcanvas />
 
-<div class="screen-layout" class:blur={$openOffCanvas}>
+<div class="screen-layout">
 	<aside class="aside-sidebar">
 		<Sidebar />
 	</aside>
@@ -34,10 +33,6 @@
 <style>
 	@import '$lib/styles/modern-normalize.css';
 	@import '$lib/styles/global.css';
-
-	.blur {
-		filter: blur(6px);
-	}
 
 	.main-layout {
 		width: 80%;
