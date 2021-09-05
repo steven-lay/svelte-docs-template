@@ -17,10 +17,6 @@ const userconfig = {
 			link: 'http://github.com/'
 		},
 		{
-			text: 'Test',
-			link: 'http://www.google.com/'
-		},
-		{
 			text: 'Blog',
 			link: '/blog'
 		}

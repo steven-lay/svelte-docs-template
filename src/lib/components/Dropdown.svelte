@@ -1,14 +1,28 @@
-<script>
-	import FaAngleDown from 'svelte-icons/fa/FaAngleDown.svelte';
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+
+	export let links = [];
+
+	let showDrop = false;
 </script>
 
-<div class="dropdown">
-	<button class="dropbtn">Dropdown &#9662;</button>
-	<div class="dropdown-content">
-		<a href="/">Link 1</a>
-		<a href="/">Link 2</a>
-		<a href="/">Link 3</a>
-	</div>
+<div
+	class="dropdown"
+	on:mouseleave={() => (showDrop = false)}
+	on:mouseenter={() => (showDrop = true)}
+>
+	<button class="dropbtn">{links.name} &#9662;</button>
+	{#if showDrop}
+		<div class="dropdown-content" transition:fade={{ duration: 100 }}>
+			{#each links as link}
+				<a
+					sveltekit:prefetch={link.link.startsWith('http') ? undefined : true}
+					target={link.link.startsWith('http') ? '_blank' : undefined}
+					href={link.link}>{link.name}</a
+				>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -31,19 +45,18 @@
 
 	.dropdown-content {
 		position: absolute;
-		display: none;
 		margin-top: 0.1rem;
-		min-width: 160px;
-		background-color: rgb(253, 253, 253);
+		min-width: 8rem;
+		background-color: white;
 		border: 1px solid rgb(200, 200, 200);
 		border-radius: 0.25rem;
+		box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.1);
 	}
 
 	.dropdown-content a {
 		display: block;
 		padding: 0.5rem 1rem;
 		text-decoration: none;
-		font-weight: 500;
 		color: rgba(0, 0, 0, 0.75);
 	}
 

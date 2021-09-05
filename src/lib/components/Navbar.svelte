@@ -28,7 +28,6 @@
 					{navitem.text}
 				</a>
 			{/each}
-			<Dropdown />
 		</nav>
 	</div>
 </header>
