@@ -50,7 +50,10 @@
 		position: sticky;
 		align-self: flex-start;
 		top: 5.5rem;
+		margin-right: 1rem;
 		width: 20%;
+		height: 52rem;
+		overflow-y: auto;
 	}
 
 	.screen-layout {
@@ -70,5 +73,19 @@
 		.screen-layout {
 			padding-top: 1.5rem;
 		}
+	}
+
+	aside::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+
+	aside::-webkit-scrollbar-track {
+		background-color: argb(255, 255, 255, 1);
+	}
+
+	aside::-webkit-scrollbar-thumb {
+		background-color: darkgrey;
+		border: 1px solid lightgray;
+		border-radius: 1rem;
 	}
 </style>

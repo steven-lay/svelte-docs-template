@@ -10,7 +10,7 @@
 	}
 </script>
 
-<nav>
+<div>
 	{#each config.sidebar as sidebarEntry}
 		<h4 class="select-none">{sidebarEntry.category}</h4>
 		{#each sidebarEntry.children as child}
@@ -28,7 +28,7 @@
 		{/each}
 		<div class="divider" />
 	{/each}
-</nav>
+</div>
 
 <style>
 	.divider {
@@ -49,8 +49,8 @@
 		padding-top: 0.5rem;
 		padding-left: 0.75rem;
 		padding-bottom: 0.5rem;
-		margin-right: 3rem;
-		font-weight: 500;
+		margin-right: 2rem;
+		font-weight: 400;
 		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
 		transition: background-color 0.3s, color 0.3s;

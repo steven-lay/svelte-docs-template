@@ -64,8 +64,7 @@
 	.markdown {
 		flex: auto;
 		width: 75%;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+		padding: 0 2rem;
 	}
 
 	.toc {
@@ -123,10 +122,6 @@
 		border-bottom: solid 1px rgb(233, 236, 239);
 	}
 
-	.markdown :global(hr) {
-		border-top: 1px solid rgb(225, 225, 225);
-	}
-
 	.markdown :global(h3) {
 		color: rgb(55, 48, 163);
 		font-size: 1.375rem;
@@ -141,6 +136,10 @@
 		color: rgb(55, 48, 163);
 		font-size: 1.125rem;
 		font-weight: 500;
+	}
+
+	.markdown :global(hr) {
+		border-top: 1px solid rgb(225, 225, 225);
 	}
 
 	.markdown :global(li) {
@@ -161,6 +160,7 @@
 
 	.markdown :global(td) {
 		padding: 0.75rem;
+		font-size: 1.05rem;
 		border: 1px solid #e7ddee;
 	}
 

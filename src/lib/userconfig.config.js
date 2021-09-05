@@ -51,7 +51,7 @@ const userconfig = {
 					link: '/test-pages/feature-testing'
 				}
 			]
-		}
+		},
 	]
 };
 
