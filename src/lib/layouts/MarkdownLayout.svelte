@@ -11,7 +11,7 @@
 	export let hide_sidenav = false;
 
 	const hideTOC = hide_toc ?? config.hideTOC ?? false;
-	const siteTitle = config.title ?? 'My Docs Site';
+	const siteTitle = config.title ?? 'My Docs Si1te';
 	let pageTitle = siteTitle;
 	let headingsList;
 

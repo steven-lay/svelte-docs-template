@@ -36,14 +36,23 @@ const userconfig = {
 				{
 					text: 'Features',
 					link: '/features'
+				}
+			]
+		},
+		{
+			category: 'Test pages',
+			children: [
+				{
+					text: 'HTML test',
+					link: '/test-pages/html-test'
 				},
 				{
-					text: 'Markdown Test',
-					link: '/markdown-test'
+					text: 'Markdown test',
+					link: '/test-pages/markdown-test'
 				},
 				{
-					text: 'HTML Test',
-					link: '/html-test'
+					text: 'Feature testing',
+					link: '/test-pages/feature-testing'
 				}
 			]
 		}

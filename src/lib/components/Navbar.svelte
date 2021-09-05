@@ -1,5 +1,6 @@
 <script>
 	import MdDehaze from 'svelte-icons/md/MdDehaze.svelte';
+	import Dropdown from './Dropdown.svelte';
 	import userconfig from '$lib/userconfig.config';
 	import { openOffCanvas } from '$lib/stores/openOffcanvas';
 
@@ -27,6 +28,7 @@
 					{navitem.text}
 				</a>
 			{/each}
+			<Dropdown />
 		</nav>
 	</div>
 </header>
@@ -35,10 +37,11 @@
 	.header {
 		position: sticky;
 		top: 0;
-		width: 100%;
+		height: 3.5rem;
 		background-color: white;
 		border-bottom: 2px solid rgb(230, 230, 230);
 		z-index: 1;
+		padding: 1rem 0;
 	}
 
 	.nav-container {
@@ -46,8 +49,8 @@
 		margin-left: auto;
 		margin-right: auto;
 		align-items: center;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		width: 100%;
+		flex: 1;
 		padding-left: 1.125rem;
 		padding-right: 1rem;
 	}
@@ -86,11 +89,9 @@
 	}
 
 	.nav-link {
+		display: inline-block;
+		padding: 0.125rem 0.75rem;
 		font-weight: 500;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
 		color: rgba(0, 0, 0, 0.75);
 		text-decoration: none;
 		transition: color 0.25s;

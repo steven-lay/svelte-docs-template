@@ -20,3 +20,10 @@ body::-webkit-scrollbar-thumb {
 	border: 1px solid lightgray;
 	border-radius: 1rem;
 }
+
+.select-none {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }

@@ -12,9 +12,10 @@
 
 <nav>
 	{#each config.sidebar as sidebarEntry}
-		<h4>{sidebarEntry.category}</h4>
+		<h4 class="select-none">{sidebarEntry.category}</h4>
 		{#each sidebarEntry.children as child}
 			<a
+				class="select-none"
 				sveltekit:prefetch={child.link.startsWith('http') ? undefined : true}
 				class:active={$page.path == child.link}
 				href={child.link}
@@ -52,11 +53,15 @@
 		font-weight: 500;
 		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
-		transition: background-color 0.3s;
+		transition: background-color 0.3s, color 0.3s;
 	}
 
 	a:visited {
 		color: rgb(55, 65, 81);
+	}
+
+	a:hover {
+		color: rgb(79, 70, 229) !important;
 	}
 
 	.active {
