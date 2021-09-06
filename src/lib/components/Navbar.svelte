@@ -3,12 +3,10 @@
 	import Dropdown from './Dropdown.svelte';
 	import userconfig from '$lib/userconfig.config';
 	import { openOffCanvas } from '$lib/stores/openOffcanvas';
-
-	export let pageWidth;
 </script>
 
 <header class="header">
-	<div class="nav-container" style="max-width: {pageWidth}rem">
+	<div class="nav-container">
 		<div class="nav-button" on:click={() => openOffCanvas.set(true)}>
 			<MdDehaze />
 		</div>

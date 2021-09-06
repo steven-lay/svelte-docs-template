@@ -45,10 +45,6 @@ const userconfig = {
 				{
 					text: 'Markdown test',
 					link: '/test-pages/markdown-test'
-				},
-				{
-					text: 'Feature testing',
-					link: '/test-pages/feature-testing'
 				}
 			]
 		},

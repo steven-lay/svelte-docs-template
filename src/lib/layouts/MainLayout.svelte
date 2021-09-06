@@ -22,10 +22,10 @@
 	{/await}
 {/if}
 
-<Navbar {pageWidth} />
+<Navbar />
 <Offcanvas />
 
-<div class="screen-layout" style="max-width: {pageWidth}rem">
+<div class="screen-layout">
 	{#if !$hideSidenav}
 		<aside class="aside-sidebar">
 			<Sidebar />

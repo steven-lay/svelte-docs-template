@@ -87,6 +87,10 @@
 		}
 	}
 
+	.markdown :global(strong) {
+		font-weight: 500;
+	}
+
 	.markdown :global(blockquote) {
 		background-color: rgba(0, 0, 0, 0.02);
 		margin-left: 0;
@@ -165,13 +169,19 @@
 		padding: 0.75rem;
 	}
 
+	.markdown :global(caption) {
+		margin-bottom: 0.125rem;
+	}
+
+	.markdown :global(a) {
+		color: rgb(89, 83, 190);
+		font-weight: 500;
+		text-decoration: none;
+	}
+
 	.markdown :global(li:not(:last-child)) {
 		margin-bottom: 0.75rem;
 		margin-top: 0.75rem;
-	}
-
-	.markdown :global(caption) {
-		margin-bottom: 0.125rem;
 	}
 
 	.markdown :global(code:not([class])) {
@@ -179,12 +189,6 @@
 		color: rgba(0, 0, 0, 0.8);
 		padding: 0.05rem;
 		font-size: 0.85rem;
-	}
-
-	.markdown :global(a) {
-		color: rgb(89, 83, 190);
-		font-weight: 500;
-		text-decoration: none;
 	}
 
 	.markdown :global(a:hover) {
