@@ -30,9 +30,8 @@
 
 <svelte:window bind:scrollY />
 
-<h4 class="select-none">ON THIS PAGE</h4>
-
 {#if headingsList.length}
+	<h4 class="select-none">ON THIS PAGE</h4>
 	{#each headingsList as heading, i}
 		<a
 			class="toc-link select-none"
