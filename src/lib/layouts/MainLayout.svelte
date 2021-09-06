@@ -51,7 +51,7 @@
 		top: 5.5rem;
 		margin-right: 1rem;
 		width: 20%;
-		height: 52rem;
+		height: 85vh;
 		overflow-y: auto;
 	}
 

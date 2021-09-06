@@ -46,6 +46,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		align-items: center;
+		max-width: 88rem;
 		width: 100%;
 		flex: 1;
 		padding-left: 1.125rem;

@@ -6,11 +6,13 @@ title: 'Features'
 
 ## Admonitions
 
-Powered by [remark-admonitions](https://github.com/elviswolcott/remark-admonitions),
+Powered by [remark-admonitions][1],
 there is support to display different types of Admonitions. A slightly modified version
-of the [classic theme](https://github.com/elviswolcott/remark-admonitions/blob/master/styles/classic.css)
+of the [classic theme][2]
 is used.
 
+	[1]: https://github.com/elviswolcott/remark-admonitions
+	[2]: https://github.com/elviswolcott/remark-admonitions/blob/master/styles/classic.css
 
 ### Tip
 
