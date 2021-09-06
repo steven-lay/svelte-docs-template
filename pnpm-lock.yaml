@@ -11,6 +11,7 @@ specifiers:
   mdsvex: ^0.9.8
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.2.0
+  rehype-plugin-image-native-lazy-loading: ^1.2.0
   remark-admonitions: ^1.2.1
   remark-slug: ^7.0.0
   stylelint: ^13.13.1
@@ -24,7 +25,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.17
-  '@sveltejs/kit': 1.0.0-next.162_svelte@3.42.4
+  '@sveltejs/kit': 1.0.0-next.163_svelte@3.42.4
   '@typescript-eslint/eslint-plugin': 4.29.3_5b13bab190e8051f191796d8c4619073
   '@typescript-eslint/parser': 4.29.3_eslint@7.32.0+typescript@4.4.2
   eslint: 7.32.0
@@ -33,6 +34,7 @@ devDependencies:
   mdsvex: 0.9.8_svelte@3.42.4
   prettier: 2.2.1
   prettier-plugin-svelte: 2.4.0_prettier@2.2.1+svelte@3.42.4
+  rehype-plugin-image-native-lazy-loading: 1.2.0
   remark-admonitions: 1.2.1
   remark-slug: 7.0.0
   stylelint: 13.13.1
@@ -357,14 +359,14 @@ packages:
     resolution: {integrity: sha512-RKYNkQxtsMgt0wD8PhfXR1hGT1Tmq1E5eZeTr1KxIerczITRnWVT8LElfu/9Kusv44yYlyQtNc1mLoYqgloOQw==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.162_svelte@3.42.4:
-    resolution: {integrity: sha512-fLJNGXeTFtwy1p91mWh+Sr+wgi0vEPgXN0uIUvofzQSNp7MDwxw2noDCogyHgxHhU3uDf2+Osz3aJC2fCsbIbw==}
+  /@sveltejs/kit/1.0.0-next.163_svelte@3.42.4:
+    resolution: {integrity: sha512-dtL/gTqVsjKqs3B3rHLgyMxCM4UCWJtUT0tZW/t6IKOk3R2aytvjTxTp0fDWnogdHt3JnyFz8mb/3AGphG8O8g==}
     engines: {node: ^12.20 || >=14.13}
     hasBin: true
     peerDependencies:
       svelte: ^3.39.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.21_svelte@3.42.4+vite@2.5.3
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.22_svelte@3.42.4+vite@2.5.3
       cheap-watch: 1.0.3
       sade: 1.7.4
       svelte: 3.42.4
@@ -374,8 +376,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.21_svelte@3.42.4+vite@2.5.3:
-    resolution: {integrity: sha512-JjPnoQoI1+VXHjguE1bWyFYdZvPN6VTZ5RsFRpju45zICas1N5jAuOqKTbhQ1G+eEMCbhhB6zjZgQQRtaXPhNQ==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.22_svelte@3.42.4+vite@2.5.3:
+    resolution: {integrity: sha512-B1O/GMIxpE4iJ3/FBUJ3oYGKHhJ99G9uFARsb8kVeReLDPhtZGXTM+7brLDefJuedbKkRkGEEkbGOVuEuEBo3g==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -2105,6 +2107,13 @@ packages:
       hast-util-from-parse5: 5.0.3
       parse5: 5.1.1
       xtend: 4.0.2
+    dev: true
+
+  /rehype-plugin-image-native-lazy-loading/1.2.0:
+    resolution: {integrity: sha512-UuUyGNTRk7dIUIJaT8z1TWsWgU3zUj/HFx/66jv94xF3wR85XBgm7GOGinzgSmpeQsSz3E3R+dvecHP1cgVmOQ==}
+    dependencies:
+      unified: 9.2.2
+      unist-util-visit: 2.0.3
     dev: true
 
   /remark-admonitions/1.2.1:
