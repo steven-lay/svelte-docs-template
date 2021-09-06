@@ -50,7 +50,7 @@
 		padding-left: 0.75rem;
 		padding-bottom: 0.5rem;
 		margin-right: 2rem;
-		font-weight: 400;
+		font-weight: 600;
 		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
 		transition: background-color 0.3s, color 0.3s;

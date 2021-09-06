@@ -47,6 +47,7 @@
 		display: flex;
 		padding-left: 0.25rem;
 		padding-right: 0.25rem;
+		padding-bottom: 2rem;
 	}
 
 	.footer-item-left {

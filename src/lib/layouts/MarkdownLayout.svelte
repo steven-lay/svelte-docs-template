@@ -98,23 +98,21 @@
 	}
 
 	.markdown :global(p) {
-		font-size: 1.05rem;
-		color: rgba(0, 0, 0, 0.8);
+		font-size: 1.125rem;
 		line-height: 1.75rem;
 	}
 
 	.markdown :global(h1) {
 		margin-top: 0;
 		margin-bottom: 1rem;
-		font-size: 2.25rem;
-		font-weight: 600;
+		font-size: 2.5rem;
 		color: rgb(49, 46, 129);
 	}
 
 	.markdown :global(h2) {
 		scroll-margin-top: 4.5rem;
 		color: rgb(55, 48, 163);
-		font-size: 1.625rem;
+		font-size: 2rem;
 		font-weight: 500;
 		padding-top: 1rem;
 		padding-bottom: 0.5rem;
@@ -124,7 +122,7 @@
 
 	.markdown :global(h3) {
 		color: rgb(55, 48, 163);
-		font-size: 1.375rem;
+		font-size: 1.75rem;
 		scroll-margin-top: 4.5rem;
 		padding-top: 0.75rem;
 		font-weight: 500;
@@ -134,7 +132,7 @@
 	.markdown :global(h4) {
 		scroll-margin-top: 4.5rem;
 		color: rgb(55, 48, 163);
-		font-size: 1.125rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 	}
 
@@ -143,12 +141,7 @@
 	}
 
 	.markdown :global(li) {
-		font-size: 1.05rem;
-		color: rgba(0, 0, 0, 0.8);
-	}
-
-	.markdown :global(strong) {
-		font-weight: 500;
+		font-size: 1.125rem;
 	}
 
 	.markdown :global(table) {
@@ -160,7 +153,7 @@
 
 	.markdown :global(td) {
 		padding: 0.75rem;
-		font-size: 1.05rem;
+		font-size: 1.125rem;
 		border: 1px solid #e7ddee;
 	}
 
@@ -168,6 +161,7 @@
 		color: rgb(49, 46, 129);
 		background-color: rgb(198, 201, 231);
 		text-align: left;
+		font-size: 1.125rem;
 		padding: 0.75rem;
 	}
 

@@ -61,7 +61,9 @@
 		max-width: 88rem;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 2rem 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 2rem;
 		transition: filter 0.25s;
 	}
 

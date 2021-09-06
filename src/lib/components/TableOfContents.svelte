@@ -49,7 +49,6 @@
 <style>
 	h4 {
 		color: rgb(49, 46, 129);
-		font-weight: 600;
 		margin-top: 0;
 		padding-bottom: 0.75rem;
 		margin-bottom: 0;
@@ -62,7 +61,7 @@
 		color: rgba(0, 0, 0, 0.7);
 		display: block;
 		text-decoration: none;
-		font-size: 0.95rem;
+		font-size: 1rem;
 		border-left: 2px solid rgba(0, 0, 0, 0.075);
 		transition: color 0.25s;
 	}
