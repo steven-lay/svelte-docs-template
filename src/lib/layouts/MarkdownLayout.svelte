@@ -194,4 +194,9 @@
 	.markdown :global(a:hover) {
 		text-decoration: underline;
 	}
+
+	.markdown :global(img) {
+		max-width: 100%;
+		height: auto;
+	}
 </style>
