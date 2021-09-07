@@ -7,7 +7,7 @@
 
 <header class="header">
 	<div class="nav-container">
-		<div class="nav-button" on:click={() => openOffCanvas.set(true)}>
+		<div class="nav-button" on:click={() => ($openOffCanvas = true)}>
 			<MdDehaze />
 		</div>
 		<div>

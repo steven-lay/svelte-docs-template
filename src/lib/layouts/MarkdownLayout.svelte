@@ -16,7 +16,7 @@
 	let headingsList;
 
 	if (hide_toc) {
-		hideSidenav.set(hide_sidenav);
+		$hideSidenav = hide_sidenav;
 	}
 
 	function getHeadings(node) {

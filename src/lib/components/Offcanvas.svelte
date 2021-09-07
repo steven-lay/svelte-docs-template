@@ -10,13 +10,13 @@
 	<div class="off-canvas" transition:fly={{ duration: slideDuration, opacity: 1, x: -300 }}>
 		<Sidebar
 			on:closeOffcanvas={() => {
-				openOffCanvas.set(false);
+				$openOffCanvas = false;
 			}} />
 	</div>
 
 	<div
 		class="fade-bg"
-		on:click={() => openOffCanvas.set(false)}
+		on:click={() => ($openOffCanvas = false)}
 		transition:fade={{ duration: slideDuration }} />
 {/if}
 
