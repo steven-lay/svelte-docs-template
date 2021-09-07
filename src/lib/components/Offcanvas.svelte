@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Sidebar from './Sidebar.svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { openOffCanvas } from '$lib/stores/openOffcanvas';
+	import Sidebar from "./Sidebar.svelte";
+	import { fade, fly } from "svelte/transition";
+	import { openOffCanvas } from "$lib/stores/openOffcanvas";
 
 	const slideDuration = 300;
 </script>
@@ -11,15 +11,13 @@
 		<Sidebar
 			on:closeOffcanvas={() => {
 				openOffCanvas.set(false);
-			}}
-		/>
+			}} />
 	</div>
 
 	<div
 		class="fade-bg"
 		on:click={() => openOffCanvas.set(false)}
-		transition:fade={{ duration: slideDuration }}
-	/>
+		transition:fade={{ duration: slideDuration }} />
 {/if}
 
 <style>

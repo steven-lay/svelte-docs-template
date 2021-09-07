@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getStores } from '$app/stores';
+	import { getStores } from "$app/stores";
 
 	let showLoadingBar = false;
 
@@ -24,7 +24,7 @@
 
 		return {
 			duration,
-			css: (t: number) => `width: ${t * width}px;`
+			css: (t: number) => `width: ${t * width}px;`,
 		};
 	}
 
@@ -35,7 +35,7 @@
 		return {
 			delay,
 			duration,
-			css: (t: number) => `opacity: ${t * opacity};` + `width: 100%`
+			css: (t: number) => `opacity: ${t * opacity};` + `width: 100%`,
 		};
 	}
 </script>

@@ -1,6 +1,6 @@
 <script>
-	import { page } from '$app/stores';
-	import config from '$lib/userconfig.config';
+	import { page } from "$app/stores";
+	import config from "$lib/userconfig.config";
 
 	let childLinks = [];
 	let curPos = -1;
@@ -22,8 +22,7 @@
 			<div>
 				<a sveltekit:noscroll href={childLinks[curPos - 1].link}>
 					<span class="arrow arrow-left">←</span><span class="arrow-text"
-						>{childLinks[curPos - 1].text}</span
-					>
+						>{childLinks[curPos - 1].text}</span>
 				</a>
 			</div>
 		{/if}
@@ -34,8 +33,7 @@
 			<div>
 				<a sveltekit:noscroll href={childLinks[curPos + 1].link}>
 					<span class="arrow-text">{childLinks[curPos + 1].text}</span><span
-						class="arrow arrow-right">→</span
-					>
+						class="arrow arrow-right">→</span>
 				</a>
 			</div>
 		{/if}

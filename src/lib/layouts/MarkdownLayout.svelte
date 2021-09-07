@@ -1,9 +1,9 @@
 <script>
-	import TableOfContents from '$lib/components/TableOfContents.svelte';
-	import TransitionWrapper from '$lib/components/TransitionWrapper.svelte';
-	import MarkdownFooter from '$lib/components/MarkdownFooter.svelte';
-	import config from '$lib/userconfig.config';
-	import { hideSidenav } from '$lib/stores/hideSidenav';
+	import TableOfContents from "$lib/components/TableOfContents.svelte";
+	import TransitionWrapper from "$lib/components/TransitionWrapper.svelte";
+	import MarkdownFooter from "$lib/components/MarkdownFooter.svelte";
+	import config from "$lib/userconfig.config";
+	import { hideSidenav } from "$lib/stores/hideSidenav";
 
 	/* Frontmatter variables */
 	export let title;
@@ -11,7 +11,7 @@
 	export let hide_sidenav = false;
 
 	const hideTOC = hide_toc ?? config.hideTOC ?? false;
-	const siteTitle = config.title ?? 'My Docs Si1te';
+	const siteTitle = config.title ?? "My Docs Si1te";
 	let pageTitle = siteTitle;
 	let headingsList;
 
@@ -22,16 +22,16 @@
 	function getHeadings(node) {
 		const depth = config.TOCdepth ?? 2;
 
-		let selectHeadings = 'h2';
+		let selectHeadings = "h2";
 
 		for (let i = 1; i < depth; i++) {
 			selectHeadings += `,h${i + 2}`;
 		}
 
-		const markdownTitle = node.querySelector('h1');
+		const markdownTitle = node.querySelector("h1");
 
 		headingsList = node.querySelectorAll(selectHeadings);
-		pageTitle = (title ?? markdownTitle?.textContent) + ' - ' + siteTitle;
+		pageTitle = (title ?? markdownTitle?.textContent) + " - " + siteTitle;
 	}
 </script>
 
@@ -54,8 +54,8 @@
 </TransitionWrapper>
 
 <style>
-	@import '$lib/styles/admonition-classic.css';
-	@import '$lib/styles/prism.css';
+	@import "$lib/styles/admonition-classic.css";
+	@import "$lib/styles/prism.css";
 
 	.flex-wrap {
 		display: flex;

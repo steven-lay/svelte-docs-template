@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Sidebar from '$lib/components/Sidebar.svelte';
-	import Offcanvas from '$lib/components/Offcanvas.svelte';
-	import config from '$lib/userconfig.config';
-	import { prefetchRoutes } from '$app/navigation';
-	import { browser } from '$app/env';
-	import { hideSidenav } from '$lib/stores/hideSidenav';
+	import Navbar from "$lib/components/Navbar.svelte";
+	import Sidebar from "$lib/components/Sidebar.svelte";
+	import Offcanvas from "$lib/components/Offcanvas.svelte";
+	import config from "$lib/userconfig.config";
+	import { prefetchRoutes } from "$app/navigation";
+	import { browser } from "$app/env";
+	import { hideSidenav } from "$lib/stores/hideSidenav";
 
 	const hideLoadbar = config.hideLoadbar ?? false;
 	const preloadRoutes = config.preloadRoutes ?? false;
@@ -16,7 +16,7 @@
 </script>
 
 {#if !hideLoadbar}
-	{#await import('$lib/components/LoadingBar.svelte') then LoadingBar}
+	{#await import("$lib/components/LoadingBar.svelte") then LoadingBar}
 		<svelte:component this={LoadingBar.default} />
 	{/await}
 {/if}
@@ -37,8 +37,8 @@
 </div>
 
 <style>
-	@import '$lib/styles/modern-normalize.css';
-	@import '$lib/styles/global.css';
+	@import "$lib/styles/modern-normalize.css";
+	@import "$lib/styles/global.css";
 
 	.main-layout {
 		width: 80%;

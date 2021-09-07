@@ -1,8 +1,8 @@
 <script>
-	import MdDehaze from 'svelte-icons/md/MdDehaze.svelte';
-	import Dropdown from './Dropdown.svelte';
-	import userconfig from '$lib/userconfig.config';
-	import { openOffCanvas } from '$lib/stores/openOffcanvas';
+	import MdDehaze from "svelte-icons/md/MdDehaze.svelte";
+	import Dropdown from "./Dropdown.svelte";
+	import userconfig from "$lib/userconfig.config";
+	import { openOffCanvas } from "$lib/stores/openOffcanvas";
 </script>
 
 <header class="header">
@@ -18,11 +18,10 @@
 		<nav class="nav-group">
 			{#each userconfig.navbar as navitem}
 				<a
-					sveltekit:prefetch={navitem.link.startsWith('http') ? undefined : true}
+					sveltekit:prefetch={navitem.link.startsWith("http") ? undefined : true}
 					class="nav-link"
-					target={navitem.link.startsWith('http') ? '_blank' : undefined}
-					href={navitem.link}
-				>
+					target={navitem.link.startsWith("http") ? "_blank" : undefined}
+					href={navitem.link}>
 					{navitem.text}
 				</a>
 			{/each}

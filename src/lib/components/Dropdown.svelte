@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade } from "svelte/transition";
 
 	export let links = [];
 
@@ -9,17 +9,15 @@
 <div
 	class="dropdown"
 	on:mouseleave={() => (showDrop = false)}
-	on:mouseenter={() => (showDrop = true)}
->
+	on:mouseenter={() => (showDrop = true)}>
 	<button class="dropbtn">{links.name} &#9662;</button>
 	{#if showDrop}
 		<div class="dropdown-content" transition:fade={{ duration: 100 }}>
 			{#each links as link}
 				<a
-					sveltekit:prefetch={link.link.startsWith('http') ? undefined : true}
-					target={link.link.startsWith('http') ? '_blank' : undefined}
-					href={link.link}>{link.name}</a
-				>
+					sveltekit:prefetch={link.link.startsWith("http") ? undefined : true}
+					target={link.link.startsWith("http") ? "_blank" : undefined}
+					href={link.link}>{link.name}</a>
 			{/each}
 		</div>
 	{/if}

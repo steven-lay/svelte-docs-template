@@ -35,13 +35,12 @@
 	{#each headingsList as heading, i}
 		<a
 			class="toc-link select-none"
-			class:toc-link-h2={heading.nodeName == 'H2'}
-			class:toc-link-h3={heading.nodeName == 'H3'}
-			class:toc-link-h4={heading.nodeName == 'H4'}
+			class:toc-link-h2={heading.nodeName == "H2"}
+			class:toc-link-h3={heading.nodeName == "H3"}
+			class:toc-link-h4={heading.nodeName == "H4"}
 			class:toc-active={curAnchor == i}
 			class:toc-past-active={i < curAnchor}
-			href="#{heading.id}">{heading.innerText}</a
-		>
+			href="#{heading.id}">{heading.innerText}</a>
 	{/each}
 {/if}
 

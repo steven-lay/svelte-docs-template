@@ -1,12 +1,12 @@
 <script>
-	import config from '$lib/userconfig.config';
-	import { page } from '$app/stores';
-	import { createEventDispatcher } from 'svelte';
+	import config from "$lib/userconfig.config";
+	import { page } from "$app/stores";
+	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
 
 	function closeOffcanvas() {
-		dispatch('closeOffcanvas');
+		dispatch("closeOffcanvas");
 	}
 </script>
 
@@ -16,13 +16,12 @@
 		{#each sidebarEntry.children as child}
 			<a
 				class="select-none"
-				sveltekit:prefetch={child.link.startsWith('http') ? undefined : true}
+				sveltekit:prefetch={child.link.startsWith("http") ? undefined : true}
 				class:active={$page.path == child.link}
 				href={child.link}
-				target={child.link.startsWith('http') ? '_blank' : undefined}
+				target={child.link.startsWith("http") ? "_blank" : undefined}
 				on:click={() => closeOffcanvas()}
-				sveltekit:noscroll
-			>
+				sveltekit:noscroll>
 				{child.text}
 			</a>
 		{/each}
