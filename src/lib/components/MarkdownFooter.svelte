@@ -62,6 +62,11 @@
 		color: var(--primaryMedium);
 	}
 
+	.arrow-text {
+		font-size: var(--bodyFontSize);
+		font-weight: 600;
+	}
+
 	.arrow-left {
 		margin-right: 0.5rem;
 	}
@@ -89,21 +94,7 @@
 		margin-bottom: 0.125rem;
 	}
 
-	.arrow-text {
-		font-size: 1.125rem;
-		font-weight: 600;
-		color: var(--primaryMedium);
-	}
-
 	@media only screen and (max-width: 425px) {
-		.footer-page-text {
-			font-size: 0.875rem;
-		}
-
-		.arrow-text {
-			font-size: 1rem;
-		}
-
 		.arrow-right {
 			margin-left: 0.25rem;
 		}
