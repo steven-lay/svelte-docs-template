@@ -3,6 +3,8 @@
 	--primaryMedium: rgb(72, 65, 180);
 	--primaryLight: rgb(224, 231, 255);
 	--bodyFontSize: 1.125rem;
+	--containerWidth: 88rem;
+	--navbarHeight: 3.5rem;
 }
 
 html {

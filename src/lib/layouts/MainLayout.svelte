@@ -58,7 +58,7 @@
 	.screen-layout {
 		display: flex;
 		transition: filter 0.25s;
-		max-width: 88rem;
+		max-width: var(--containerWidth);
 		margin: 0 auto;
 		padding: 2rem 1rem 0 1rem;
 	}

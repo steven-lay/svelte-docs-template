@@ -34,7 +34,7 @@
 		position: sticky;
 		z-index: 1;
 		top: 0;
-		height: 3.5rem;
+		height: var(--navbarHeight);
 		border-bottom: 2px solid rgb(230, 230, 230);
 		padding: 1rem 0;
 		background-color: white;
@@ -44,7 +44,7 @@
 		display: flex;
 		flex: 1;
 		align-items: center;
-		max-width: 88rem;
+		max-width: var(--containerWidth);
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
