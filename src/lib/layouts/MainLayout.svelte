@@ -41,29 +41,26 @@
 	@import "$lib/styles/global.css";
 
 	.main-layout {
-		width: 80%;
 		flex: auto;
+		width: 80%;
 	}
 
 	.aside-sidebar {
 		position: sticky;
-		align-self: flex-start;
 		top: 5.5rem;
-		margin-right: 1rem;
+		align-self: flex-start;
+		overflow-y: auto;
 		width: 20%;
 		height: 85vh;
-		overflow-y: auto;
+		margin-right: 1rem;
 	}
 
 	.screen-layout {
 		display: flex;
-		max-width: 88rem;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-top: 2rem;
 		transition: filter 0.25s;
+		max-width: 88rem;
+		margin: 0 auto;
+		padding: 2rem 1rem 0 1rem;
 	}
 
 	@media screen and (max-width: 992px) {

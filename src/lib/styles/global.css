@@ -1,3 +1,10 @@
+:root {
+	--primaryDark: rgb(49, 46, 129);
+	--primaryMedium: rgb(72, 65, 180);
+	--primaryLight: rgb(224, 231, 255);
+	--bodyFontSize: 1.125rem;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -8,8 +15,8 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 0.75rem;
 	border-left: 1px solid lightgray;
+	width: 0.75rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -17,9 +24,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: darkgrey;
 	border: 1px solid lightgray;
 	border-radius: 1rem;
+	background-color: darkgrey;
 }
 
 .select-none {
@@ -29,50 +36,38 @@ body::-webkit-scrollbar-thumb {
 	user-select: none;
 }
 
-/* assistant-regular - latin */
 @font-face {
 	font-family: 'Assistant';
 	font-style: normal;
 	font-weight: 400;
-	font-display: fallback;
-	src: local(''), 
-	url('$lib/styles/fonts/assistant-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	font-display: swap;
+	src: url('$lib/styles/fonts/assistant-v8-latin-regular.woff2') format('woff2'),
 	url('$lib/styles/fonts/assistant-v8-latin-regular.woff') format('woff');
-	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* assistant-500 - latin */
 @font-face {
 	font-family: 'Assistant';
 	font-style: normal;
 	font-weight: 500;
-	font-display: fallback;
-	src: local(''), 
-	url('$lib/styles/fonts/assistant-v8-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	font-display: swap;
+	src: url('$lib/styles/fonts/assistant-v8-latin-500.woff2') format('woff2'),
 	url('$lib/styles/fonts/assistant-v8-latin-500.woff') format('woff');
-	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* assistant-600 - latin */
 @font-face {
 	font-family: 'Assistant';
 	font-style: normal;
 	font-weight: 600;
-	font-display: fallback;
-	src: local(''), 
-	url('$lib/styles/fonts/assistant-v8-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	font-display: swap;
+	src: url('$lib/styles/fonts/assistant-v8-latin-600.woff2') format('woff2'),
 	url('$lib/styles/fonts/assistant-v8-latin-600.woff') format('woff');
-	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* assistant-700 - latin */
 @font-face {
 	font-family: 'Assistant';
 	font-style: normal;
 	font-weight: 700;
-	font-display: fallback;
-	src: local(''), 
-	url('$lib/styles/fonts/assistant-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	font-display: swap;
+	src: url('$lib/styles/fonts/assistant-v8-latin-700.woff2') format('woff2'),
 	url('$lib/styles/fonts/assistant-v8-latin-700.woff') format('woff');
-	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

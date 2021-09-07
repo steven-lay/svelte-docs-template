@@ -23,21 +23,21 @@
 <style>
 	.off-canvas {
 		position: fixed;
-		background-color: rgb(250, 250, 250);
-		padding: 2rem 1rem;
+		z-index: 3;
 		top: 0;
 		bottom: 0;
 		width: 18rem;
-		z-index: 3;
+		padding: 2rem 1rem;
+		background-color: white;
 	}
 
 	.fade-bg {
 		position: fixed;
-		background-color: rgba(0, 0, 0, 0.65);
+		z-index: 2;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.65);
 	}
 </style>

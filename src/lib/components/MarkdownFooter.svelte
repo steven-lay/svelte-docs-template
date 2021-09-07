@@ -58,8 +58,8 @@
 	}
 
 	.arrow {
-		font-size: 1.375rem;
-		color: rgb(79, 70, 229);
+		font-size: var(--bodyFontSize);
+		color: var(--primaryMedium);
 	}
 
 	.arrow-left {
@@ -84,15 +84,15 @@
 	}
 
 	.footer-page-text {
-		font-weight: 500;
+		font-weight: 600;
 		color: rgba(0, 0, 0, 0.7);
 		margin-bottom: 0.125rem;
 	}
 
 	.arrow-text {
 		font-size: 1.125rem;
-		font-weight: 500;
-		color: rgb(79, 70, 229);
+		font-weight: 600;
+		color: var(--primaryMedium);
 	}
 
 	@media only screen and (max-width: 425px) {
@@ -102,10 +102,6 @@
 
 		.arrow-text {
 			font-size: 1rem;
-		}
-
-		.arrow {
-			font-size: 1.125rem;
 		}
 
 		.arrow-right {

@@ -28,12 +28,11 @@
 		};
 	}
 
-	function loadOut(node: Element, { delay = 0, duration = 400 }) {
+	function loadOut(node: Element, { duration = 400 }) {
 		const style = getComputedStyle(node);
 		const opacity = +style.opacity;
 
 		return {
-			delay,
 			duration,
 			css: (t: number) => `opacity: ${t * opacity};` + `width: 100%`,
 		};
@@ -46,11 +45,11 @@
 
 <style>
 	.loading-bar {
+		position: fixed;
+		z-index: 50;
 		top: 0;
 		left: 0;
 		width: 100%;
-		z-index: 50;
-		position: fixed;
 		height: 2px;
 		background-color: rgb(169, 127, 199);
 	}

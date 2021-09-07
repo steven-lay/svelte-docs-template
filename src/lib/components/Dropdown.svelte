@@ -24,6 +24,7 @@
 </div>
 
 <style>
+	/* Code from w3schools */
 	.dropbtn {
 		background-color: transparent;
 		border: none;

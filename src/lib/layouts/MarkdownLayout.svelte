@@ -72,14 +72,12 @@
 		top: 5.5rem;
 		align-self: flex-start;
 		width: 25%;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding: 0 1rem;
 	}
 
 	@media screen and (max-width: 992px) {
 		.markdown {
-			padding-left: 0;
-			padding-right: 0;
+			padding: 0;
 		}
 
 		.toc {
@@ -92,50 +90,47 @@
 	}
 
 	.markdown :global(blockquote) {
-		background-color: rgba(0, 0, 0, 0.02);
-		margin-left: 0;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
+		margin: 1rem 0;
+		width: 100%;
 		padding: 0.1rem 0.5rem 0.1rem 1rem;
 		border-left: 3px solid rgb(206, 206, 206);
-		width: 100%;
+		background-color: rgba(0, 0, 0, 0.02);
 	}
 
 	.markdown :global(p) {
-		font-size: 1.125rem;
+		font-size: var(--bodyFontSize);
 		line-height: 1.75rem;
 	}
 
 	.markdown :global(h1) {
 		margin-top: 0;
 		margin-bottom: 1rem;
+		color: var(--primaryDark);
 		font-size: 2.5rem;
-		color: rgb(49, 46, 129);
 	}
 
 	.markdown :global(h2) {
 		scroll-margin-top: 4.5rem;
-		color: rgb(55, 48, 163);
-		font-size: 2rem;
-		font-weight: 500;
-		padding-top: 1rem;
-		padding-bottom: 0.5rem;
+		color: var(--primaryMedium);
+		padding: 1rem 0 0.5rem 0;
 		margin-bottom: 0;
 		border-bottom: solid 1px rgb(233, 236, 239);
+		font-size: 2rem;
+		font-weight: 500;
 	}
 
 	.markdown :global(h3) {
-		color: rgb(55, 48, 163);
-		font-size: 1.75rem;
 		scroll-margin-top: 4.5rem;
 		padding-top: 0.75rem;
-		font-weight: 500;
 		margin-bottom: 0;
+		color: var(--primaryMedium);
+		font-size: 1.75rem;
+		font-weight: 500;
 	}
 
 	.markdown :global(h4) {
 		scroll-margin-top: 4.5rem;
-		color: rgb(55, 48, 163);
+		color: var(--primaryMedium);
 		font-size: 1.5rem;
 		font-weight: 500;
 	}
@@ -145,7 +140,7 @@
 	}
 
 	.markdown :global(li) {
-		font-size: 1.125rem;
+		font-size: var(--bodyFontSize);
 	}
 
 	.markdown :global(table) {
@@ -157,16 +152,16 @@
 
 	.markdown :global(td) {
 		padding: 0.75rem;
-		font-size: 1.125rem;
 		border: 1px solid #e7ddee;
+		font-size: var(--bodyFontSize);
 	}
 
 	.markdown :global(th) {
+		padding: 0.75rem;
 		color: rgb(49, 46, 129);
 		background-color: rgb(198, 201, 231);
 		text-align: left;
-		font-size: 1.125rem;
-		padding: 0.75rem;
+		font-size: var(--bodyFontSize);
 	}
 
 	.markdown :global(caption) {
@@ -180,8 +175,7 @@
 	}
 
 	.markdown :global(li:not(:last-child)) {
-		margin-bottom: 0.75rem;
-		margin-top: 0.75rem;
+		margin: 0.75rem 0;
 	}
 
 	.markdown :global(code:not([class])) {

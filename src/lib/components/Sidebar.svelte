@@ -40,7 +40,7 @@
 		padding-left: 0.75rem;
 		font-size: 1.05rem;
 		text-transform: uppercase;
-		color: rgb(49, 46, 129);
+		color: var(--primaryDark);
 	}
 
 	a {
@@ -60,12 +60,12 @@
 	}
 
 	a:hover {
-		color: rgb(79, 70, 229) !important;
+		color: var(--primaryMedium) !important;
 	}
 
 	.active {
-		background-color: rgb(224, 231, 255);
 		border-radius: 0.3rem;
-		color: rgb(79, 70, 229) !important;
+		background-color: var(--primaryLight);
+		color: var(--primaryMedium) !important;
 	}
 </style>

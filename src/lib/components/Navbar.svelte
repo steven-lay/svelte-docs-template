@@ -32,30 +32,30 @@
 <style>
 	.header {
 		position: sticky;
+		z-index: 1;
 		top: 0;
 		height: 3.5rem;
-		background-color: white;
 		border-bottom: 2px solid rgb(230, 230, 230);
-		z-index: 1;
 		padding: 1rem 0;
+		background-color: white;
 	}
 
 	.nav-container {
 		display: flex;
-		margin-left: auto;
-		margin-right: auto;
+		flex: 1;
 		align-items: center;
 		max-width: 88rem;
 		width: 100%;
-		flex: 1;
+		margin-left: auto;
+		margin-right: auto;
 		padding-left: 1.125rem;
 		padding-right: 1rem;
 	}
 
 	.nav-button {
-		margin-right: 2rem;
-		width: 1.25rem;
 		height: 1.25rem;
+		width: 1.25rem;
+		margin-right: 2rem;
 		cursor: pointer;
 	}
 
@@ -79,19 +79,19 @@
 
 	.nav-title {
 		margin-right: 2rem;
-		font-weight: 700;
-		font-size: 1.125rem;
 		text-decoration: none;
-		color: rgb(49, 46, 129);
+		font-weight: 700;
+		font-size: var(--bodyFontSize);
+		color: var(--primaryDark);
 	}
 
 	.nav-link {
 		display: inline-block;
-		padding: 0.125rem 0.75rem;
-		font-weight: 500;
-		color: rgba(0, 0, 0, 0.75);
-		text-decoration: none;
 		transition: color 0.25s;
+		font-weight: 600;
+		padding: 0.125rem 0.75rem;
+		text-decoration: none;
+		color: rgba(0, 0, 0, 0.75);
 	}
 
 	.nav-link:visited {
@@ -99,6 +99,6 @@
 	}
 
 	.nav-link:hover {
-		color: rgba(79, 70, 229, 1);
+		color: var(--primaryMedium);
 	}
 </style>

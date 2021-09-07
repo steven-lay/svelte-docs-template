@@ -46,7 +46,7 @@
 
 <style>
 	h4 {
-		color: rgb(49, 46, 129);
+		color: var(--primaryDark);
 		margin-top: 0;
 		padding-bottom: 0.75rem;
 		margin-bottom: 0;
@@ -65,7 +65,7 @@
 	}
 
 	.toc-link:hover {
-		color: rgb(79, 70, 229) !important;
+		color: var(--primaryMedium) !important;
 	}
 
 	.toc-link-h2 {
@@ -86,7 +86,7 @@
 
 	/* Highlight current anchor */
 	.toc-active {
-		color: rgb(79, 70, 229) !important;
+		color: var(--primaryMedium) !important;
 		font-weight: 500;
 	}
 
