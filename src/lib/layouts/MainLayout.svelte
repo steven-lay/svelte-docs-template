@@ -8,9 +8,9 @@
 	import { hideSidenav } from "$lib/stores/hideSidenav";
 
 	const hideLoadbar = config.hideLoadbar ?? false;
-	const preloadRoutes = config.preloadRoutes ?? true;
+	const prefetchRoutes = config.prefetchRoutes ?? true;
 
-	if (preloadRoutes && browser) {
+	if (prefetchRoutes && browser) {
 		prefetchRoutes();
 	}
 </script>

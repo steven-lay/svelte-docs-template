@@ -2,7 +2,7 @@ export interface userconfig {
 	title?: string;
 	navbar?: Array<navbarItem>;
 	sidebar?: Array<sidebarItem>;
-	preloadRoutes?: boolean;
+	prefetchRoutes?: boolean;
 	hideLoadbar?: boolean;
 	hideTOC?: boolean;
 	pageTransitions?: pageTransitions;
