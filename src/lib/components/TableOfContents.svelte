@@ -1,12 +1,17 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 
+	export let headingsList = [];
+
+	let curAnchor = -1;
+
 	onMount(() => {
 		const obs = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						let j = 0;
+						/* find the heading that intersected and set that as active anchor */
 						for (let heading of headingsList) {
 							if (heading == entry.target) {
 								curAnchor = j;
@@ -15,15 +20,18 @@
 							j++;
 						}
 					} else {
+						/* if scrolling up, set anchor to previous heading */
 						if (entry.boundingClientRect.y > 0) {
 							curAnchor -= 1;
 						}
 					}
 				});
 			},
+			/* rootMargin is 86% towards the top of the page */
 			{ rootMargin: "0px 0px -86% 0px" }
 		);
 
+		/* observe all relevent headings */
 		headingsList.forEach((heading) => {
 			obs.observe(heading);
 		});
@@ -32,14 +40,7 @@
 			obs.disconnect();
 		};
 	});
-
-	export let headingsList = [];
-
-	let curAnchor = -1;
-	let scrollY: number;
 </script>
-
-<svelte:window bind:scrollY />
 
 {#if headingsList.length}
 	<h4 class="select-none">ON THIS PAGE</h4>
