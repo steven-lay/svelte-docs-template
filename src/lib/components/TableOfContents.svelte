@@ -1,31 +1,42 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
+	onMount(() => {
+		const obs = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						let j = 0;
+						for (let heading of headingsList) {
+							if (heading == entry.target) {
+								curAnchor = j;
+								break;
+							}
+							j++;
+						}
+					} else {
+						if (entry.boundingClientRect.y > 0) {
+							curAnchor -= 1;
+						}
+					}
+				});
+			},
+			{ rootMargin: "0px 0px -86% 0px" }
+		);
+
+		headingsList.forEach((heading) => {
+			obs.observe(heading);
+		});
+
+		return () => {
+			obs.disconnect();
+		};
+	});
+
 	export let headingsList = [];
 
 	let curAnchor = -1;
 	let scrollY: number;
-
-	/* Update active anchor on scroll */
-	$: updateAnchor(scrollY);
-
-	function updateAnchor(_dummy) {
-		const offsetTop = 105;
-
-		if (!headingsList.length) return;
-
-		for (let i = 0; i < headingsList.length; i++) {
-			if (
-				headingsList[i].getBoundingClientRect().top < offsetTop &&
-				headingsList[i].getBoundingClientRect().top > 0
-			) {
-				curAnchor = i;
-			} else if (
-				curAnchor >= 0 &&
-				headingsList[curAnchor].getBoundingClientRect().top > offsetTop
-			) {
-				curAnchor -= 1;
-			}
-		}
-	}
 </script>
 
 <svelte:window bind:scrollY />
