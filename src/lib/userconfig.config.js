@@ -1,7 +1,7 @@
 /** @type {import('$lib/types/types').userconfig} */
 const userconfig = {
 	title: 'My docs site',
-	prefetchRoutes: true,
+	prefetchAllRoutes: true,
 	hideTOC: false,
 	hideLoadbar: false,
 	pageWidth: 88,
