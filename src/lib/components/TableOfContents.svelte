@@ -5,20 +5,24 @@
 
 	let curAnchor = -1;
 
-	let intersectOptions = {
-		rootMargin: "15% 0px -85% 0px",
-		threshold: 1.0,
-	};
-
 	function intersectCallback(entries) {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				curAnchor = entry.target.headIndex;
+			} else {
+				if (entry.boundingClientRect.y > entry.boundingClientRect.height) {
+					curAnchor -= 1;
+				}
 			}
 		});
 	}
 
 	onMount(() => {
+		let intersectOptions = {
+			threshold: 0.5,
+			rootMargin: "-5% 0px -85% 0px",
+		};
+
 		let observer = new IntersectionObserver(intersectCallback, intersectOptions);
 
 		headingsList.forEach((heading, index) => {
