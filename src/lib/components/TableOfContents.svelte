@@ -87,7 +87,7 @@
 	/* Highlight current anchor */
 	.toc-active {
 		color: var(--primaryMedium) !important;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	/* Dim the anchors that have been scrolled past */
