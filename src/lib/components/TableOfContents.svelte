@@ -1,36 +1,34 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-
 	export let headingsList = [];
 
 	let curAnchor = -1;
+	let scrollY: number;
 
-	let intersectOptions = {
-		rootMargin: "15% 0px -85% 0px",
-		threshold: 1.0,
-	};
+	/* Update active anchor on scroll */
+	$: updateAnchor(scrollY);
 
-	function intersectCallback(entries) {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				curAnchor = entry.target.headIndex;
+	function updateAnchor(_dummy) {
+		const offsetTop = 105;
+
+		if (!headingsList.length) return;
+
+		for (let i = 0; i < headingsList.length; i++) {
+			if (
+				headingsList[i].getBoundingClientRect().top < offsetTop &&
+				headingsList[i].getBoundingClientRect().top > 0
+			) {
+				curAnchor = i;
+			} else if (
+				curAnchor >= 0 &&
+				headingsList[curAnchor].getBoundingClientRect().top > offsetTop
+			) {
+				curAnchor -= 1;
 			}
-		});
+		}
 	}
-
-	onMount(() => {
-		let observer = new IntersectionObserver(intersectCallback, intersectOptions);
-
-		headingsList.forEach((heading, index) => {
-			heading.headIndex = index;
-			observer.observe(heading);
-		});
-
-		return () => {
-			observer.disconnect();
-		};
-	});
 </script>
+
+<svelte:window bind:scrollY />
 
 {#if headingsList.length}
 	<h4 class="select-none">ON THIS PAGE</h4>
