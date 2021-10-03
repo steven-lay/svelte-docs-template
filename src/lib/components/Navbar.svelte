@@ -1,8 +1,8 @@
-<script>
-import MdDehaze from 'svelte-icons/md/MdDehaze.svelte'
-import Dropdown from './Dropdown.svelte'
-import userconfig from '$lib/userconfig.config'
+<script lang="ts">
 import { openOffCanvas } from '$lib/stores/openOffcanvas'
+import userconfig from '$lib/userconfig.config'
+import MdDehaze from 'svelte-icons/md/MdDehaze.svelte'
+import Link from '$lib/components/Link.svelte'
 </script>
 
 <header class="header">
@@ -17,14 +17,7 @@ import { openOffCanvas } from '$lib/stores/openOffcanvas'
     </div>
     <nav class="nav-group">
       {#each userconfig.navbar as navitem}
-        <a
-          sveltekit:prefetch="{navitem.link.startsWith('http') ? undefined : true}"
-          class="nav-link"
-          target="{navitem.link.startsWith('http') ? '_blank' : undefined}"
-          href="{navitem.link}"
-        >
-          {navitem.text}
-        </a>
+        <Link class="nav-link" to="{navitem.link}">{navitem.text}</Link>
       {/each}
     </nav>
   </div>
@@ -86,7 +79,7 @@ import { openOffCanvas } from '$lib/stores/openOffcanvas'
   color: var(--primaryDark);
 }
 
-.nav-link {
+:global(.nav-link) {
   display: inline-block;
   transition: color 0.25s;
   font-weight: 600;
@@ -95,11 +88,11 @@ import { openOffCanvas } from '$lib/stores/openOffcanvas'
   color: rgba(0, 0, 0, 0.75);
 }
 
-.nav-link:visited {
+:global(.nav-link:visited) {
   color: black;
 }
 
-.nav-link:hover {
+:global(.nav-link:hover) {
   color: var(--primaryMedium);
 }
 </style>
