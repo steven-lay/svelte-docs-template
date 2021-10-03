@@ -1,0 +1,8 @@
+{
+	"semi": false,
+	"singleQuote": true,
+	"printWidth": 90,
+	"svelteIndentScriptAndStyle": false,
+	"svelteStrictMode": true,
+  "htmlWhitespaceSensitivity": "ignore"
+}
