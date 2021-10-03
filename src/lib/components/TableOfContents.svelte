@@ -1,21 +1,22 @@
 <script lang="ts">
-export let headingsList = []
+export let headingsList: NodeListOf<Element>
 
 let curAnchor = -1
 let scrollY: number
 
 /* Update active anchor on scroll */
-$: updateAnchor(scrollY)
+$: {
+  scrollY
+  if (headingsList) updateAnchor()
+}
 
-function updateAnchor(_dummy) {
+function updateAnchor() {
   const offsetTop = 105
 
-  if (!headingsList.length) return
-
-  for (let i = 0; i < headingsList.length; i++) {
+  headingsList.forEach((heading, i) => {
     if (
-      headingsList[i].getBoundingClientRect().top < offsetTop &&
-      headingsList[i].getBoundingClientRect().top > 0
+      heading.getBoundingClientRect().top < offsetTop &&
+      heading.getBoundingClientRect().top > 0
     ) {
       curAnchor = i
     } else if (
@@ -24,13 +25,13 @@ function updateAnchor(_dummy) {
     ) {
       curAnchor -= 1
     }
-  }
+  })
 }
 </script>
 
 <svelte:window bind:scrollY />
 
-{#if headingsList.length}
+{#if headingsList}
   <h4 class="select-none">ON THIS PAGE</h4>
   {#each headingsList as heading, i}
     <a
@@ -42,7 +43,7 @@ function updateAnchor(_dummy) {
       class:toc-past-active="{i < curAnchor}"
       href="#{heading.id}"
     >
-      {heading.innerText}
+      {heading.textContent}
     </a>
   {/each}
 {/if}
