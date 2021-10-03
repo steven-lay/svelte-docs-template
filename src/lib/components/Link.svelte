@@ -2,7 +2,11 @@
 import { page } from '$app/stores'
 
 export let to: string
-export let noscroll: boolean = false
+export let noscroll = false
+
+function isExternalLink(): boolean {
+  return to.startsWith('http')
+}
 </script>
 
 <a
@@ -11,8 +15,8 @@ export let noscroll: boolean = false
   sveltekit:prefetch="{to.startsWith('http') ? undefined : true}"
   sveltekit:noscroll="{noscroll ? true : undefined}"
   class:active-link="{$page.path == to}"
-  target="{to.startsWith('http') ? '_blank' : undefined}"
-  rel="{to.startsWith('http') ? 'noopener noreferrer' : undefined}"
+  target="{isExternalLink() ? '_blank' : undefined}"
+  rel="{isExternalLink() ? 'noopener noreferrer' : undefined}"
   on:click
 >
   <slot />
