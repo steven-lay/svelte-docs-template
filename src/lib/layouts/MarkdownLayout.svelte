@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import TableOfContents from '$lib/components/TableOfContents.svelte'
 import TransitionWrapper from '$lib/components/TransitionWrapper.svelte'
 import MarkdownFooter from '$lib/components/MarkdownFooter.svelte'
@@ -6,20 +6,20 @@ import config from '$lib/userconfig.config'
 import { hideSidenav } from '$lib/stores/hideSidenav'
 
 /* Frontmatter variables */
-export let title: string
-export let hide_toc: boolean
+export let title
+export let hide_toc
 export let hide_sidenav = false
 
 const hideTOC = hide_toc ?? config.hideTOC ?? false
 const siteTitle = config.title ?? 'My Docs Si1te'
 let pageTitle = siteTitle
-let headingsList: NodeListOf<Element>
+let headingsList
 
 if (hide_toc) {
   $hideSidenav = hide_sidenav
 }
 
-function getHeadings(node: HTMLElement) {
+function getHeadings(node) {
   const depth = config.TOCdepth ?? 2
 
   let selectHeadings = 'h2'
