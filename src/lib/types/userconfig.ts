@@ -1,7 +1,7 @@
-export interface userconfig {
+export default interface userconfig {
 	title?: string;
-	navbar?: Array<navbarItem>;
-	sidebar?: Array<sidebarItem>;
+	navbar?: navbarItem[];
+	sidebar?: sidebarItem[];
 	prefetchAllRoutes?: boolean;
 	hideLoadbar?: boolean;
 	hideTOC?: boolean;

@@ -1,12 +1,10 @@
 <script>
 import config from '$lib/userconfig.config'
 import Link from '$lib/components/Link.svelte'
-import { createEventDispatcher } from 'svelte'
-
-const dispatch = createEventDispatcher()
+import { openOffCanvas } from '$lib/stores/openOffcanvas'
 
 function closeOffcanvas() {
-  dispatch('closeOffcanvas')
+  $openOffCanvas = false
 }
 </script>
 

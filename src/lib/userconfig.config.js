@@ -1,4 +1,4 @@
-/** @type {import('$lib/types/types').userconfig} */
+/** @type {import('$lib/types/userconfig').default} */
 const userconfig = {
 	title: 'My docs site',
 	prefetchAllRoutes: true,
