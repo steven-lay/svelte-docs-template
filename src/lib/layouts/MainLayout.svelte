@@ -16,8 +16,8 @@ if (prefetchAllRoutes && browser) {
 </script>
 
 {#if !hideLoadbar}
-  {#await import('$lib/components/LoadingBar.svelte') then LoadingBar}
-    <svelte:component this="{LoadingBar.default}" />
+  {#await import('$lib/components/LoadingBar.svelte') then { default: LoadingBar }}
+    <LoadingBar />
   {/await}
 {/if}
 
