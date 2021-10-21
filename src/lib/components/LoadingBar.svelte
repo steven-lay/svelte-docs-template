@@ -1,4 +1,5 @@
 <script lang="ts">
+import { onDestroy } from 'svelte'
 import { getStores } from '$app/stores'
 
 let showLoadingBar = false
@@ -16,6 +17,10 @@ getStores().navigating.subscribe((nav) => {
   } else {
     showLoadingBar = false
   }
+})
+
+onDestroy(() => {
+  clearTimeout(timer)
 })
 
 function loadIn(node: Element, { duration = 1500 }) {
