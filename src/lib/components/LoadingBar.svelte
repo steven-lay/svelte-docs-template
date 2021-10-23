@@ -1,27 +1,13 @@
 <script lang="ts">
-import { onDestroy } from 'svelte'
-import { getStores } from '$app/stores'
+import { navigating } from '$app/stores'
 
 let showLoadingBar = false
 
-let timer: NodeJS.Timeout
-
-/* If it takes more than 100 ms to load another page, show loading bar */
-getStores().navigating.subscribe((nav) => {
-  clearTimeout(timer)
-  /* If navigating to a different page */
-  if (nav?.from.path != nav?.to.path) {
-    timer = setTimeout(() => {
-      showLoadingBar = true
-    }, 100)
-  } else {
-    showLoadingBar = false
-  }
-})
-
-onDestroy(() => {
-  clearTimeout(timer)
-})
+$: if ($navigating?.from.path !== $navigating?.to.path) {
+  showLoadingBar = true
+} else {
+  showLoadingBar = false
+}
 
 function loadIn(node: Element, { duration = 1500 }) {
   const style = getComputedStyle(node)
