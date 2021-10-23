@@ -5,9 +5,8 @@ let curAnchor = -1
 let scrollY: number
 
 /* Update active anchor on scroll */
-$: {
-  scrollY
-  if (headingsList) updateAnchor()
+$: if (scrollY && headingsList) {
+  updateAnchor()
 }
 
 function updateAnchor() {
