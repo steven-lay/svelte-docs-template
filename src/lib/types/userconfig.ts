@@ -10,7 +10,7 @@ export default interface userconfig {
 	TOCdepth?: number;
 }
 
-interface navbarItem {
+export interface navbarItem {
 	text: string;
 	link: string;
 }
@@ -23,5 +23,5 @@ interface pageTransitions {
 
 interface sidebarItem {
 	category: string;
-	children: Array<navbarItem>;
+	children: navbarItem[];
 }

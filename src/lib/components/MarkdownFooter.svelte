@@ -1,8 +1,10 @@
 <script lang="ts">
 import { page } from '$app/stores'
-import { childlink } from '$lib/stores/childlinks'
+import { getChildLinks } from '$lib/utils/childlinks'
 
-let curPos = $childlink.findIndex((mem) => $page.path === mem.link)
+let childLinks = getChildLinks()
+
+let curPos = childLinks.findIndex((mem) => $page.path === mem.link)
 </script>
 
 <hr />
@@ -12,19 +14,19 @@ let curPos = $childlink.findIndex((mem) => $page.path === mem.link)
     {#if curPos > 0}
       <div class="footer-page-text">Previous page</div>
       <div>
-        <a sveltekit:noscroll href="{$childlink[curPos - 1].link}">
+        <a sveltekit:noscroll href="{childLinks[curPos - 1].link}">
           <span class="arrow arrow-left">←</span>
-          <span class="arrow-text">{$childlink[curPos - 1].text}</span>
+          <span class="arrow-text">{childLinks[curPos - 1].text}</span>
         </a>
       </div>
     {/if}
   </div>
   <div class="footer-item-right">
-    {#if curPos < $childlink.length - 1}
+    {#if curPos < childLinks.length - 1}
       <div class="footer-page-text">Next page</div>
       <div>
-        <a sveltekit:noscroll href="{$childlink[curPos + 1].link}">
-          <span class="arrow-text">{$childlink[curPos + 1].text}</span>
+        <a sveltekit:noscroll href="{childLinks[curPos + 1].link}">
+          <span class="arrow-text">{childLinks[curPos + 1].text}</span>
           <span class="arrow arrow-right">→</span>
         </a>
       </div>
